@@ -449,6 +449,64 @@ Primary use:
 
 
 
+/*==================================================================
+  RESPONS (EDITED - REMOVE RESPONSIVE [ LG ] AND PUT HERE)
+==================================================================*/
+
+
+/*//////////////////////////////////////////////////////////////////
+
+/*---------------------------------------------*/
+.respon1 {
+  position: relative;
+  left: unset;
+  top: unset;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*---------------------------------------------*/
+.respon2 {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/*---------------------------------------------*/
+.respon3 {
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 8rem;
+}
+
+/*---------------------------------------------*/
+.respon4 {
+  align-items: center;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+/*---------------------------------------------*/
+.respon5 {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*---------------------------------------------*/
+.respon6 {
+  text-align: center;
+}
 
 
 
@@ -604,58 +662,6 @@ screen and (max-height: 700px) {
 
   .w-full-lg {
     width: 100%;
-  }
-
-  /*---------------------------------------------*/
-  .respon1 {
-    position: relative;
-    left: unset;
-    top: unset;
-    max-width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  /*---------------------------------------------*/
-  .respon2 {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  /*---------------------------------------------*/
-  .respon3 {
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 8rem;
-  }
-
-  /*---------------------------------------------*/
-  .respon4 {
-    align-items: center;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-  }
-
-  /*---------------------------------------------*/
-  .respon5 {
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  /*---------------------------------------------*/
-  .respon6 {
-    text-align: center;
   }
 
 }
