@@ -1,9 +1,9 @@
 /*------------------------------------------------------------------
 Project:  ComingSoon
-Version:  
-Last change:  
+Version:
+Last change:
 Assigned to:  Bach Le
-Primary use:  
+Primary use:
 -------------------------------------------------------------------*/
 
 
@@ -314,7 +314,7 @@ Primary use:
 
 
 /*==================================================================
-   WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE  
+   WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE
 ==================================================================*/
 .where1 {
   align-self: flex-start;
@@ -337,7 +337,7 @@ Primary use:
 
 
 /*==================================================================
- HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW 
+ HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW
 ==================================================================*/
 .placeholder0::-webkit-input-placeholder {
   color: #cfcece;
@@ -381,7 +381,7 @@ Primary use:
 }
 
 .wrappic1 img {
-  width: 9rem;
+  width: 15rem;
 }
 
 /*---------------------------------------------*/
@@ -399,7 +399,9 @@ Primary use:
 /*---------------------------------------------*/
 .how-social {
   color: #fff;
-  font-size: 2.8rem;
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0 1rem;
   background-color: transparent;
 }
 
@@ -645,7 +647,7 @@ screen and (max-height: 700px) {
 
   /*---------------------------------------------*/
   .respon5 {
-    padding-top: 10rem;
+    padding-top: 5rem;
     padding-bottom: 3rem;
     flex-direction: row;
     justify-content: center;
@@ -728,7 +730,7 @@ screen and (max-height: 700px) {
 
   /*---------------------------------------------*/
   .respon8 {
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -887,7 +889,7 @@ screen and (max-height: 700px) {
   }
 
   .respon5 {
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
   /* Height */
