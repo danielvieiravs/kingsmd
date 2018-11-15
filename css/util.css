@@ -13,7 +13,7 @@
 body,
 html {
 	font-family: Arial, sans-serif;
-	font-size: 15px;
+	font-size: 62.5%;
 	color: #666666;
 
 	height: 100%;
@@ -969,7 +969,7 @@ iframe {
 }
 
 .p-t-22 {
-	padding-top: 22px;
+	padding-top: 2.2rem;
 }
 
 .p-t-23 {
@@ -2625,7 +2625,7 @@ iframe {
 }
 
 .p-b-185 {
-	padding-bottom: 185px;
+	padding-bottom: 18.5rem;
 }
 
 .p-b-186 {
@@ -3149,7 +3149,7 @@ iframe {
 }
 
 .p-l-65 {
-	padding-left: 65px;
+	padding-left: 6.5rem;
 }
 
 .p-l-66 {
