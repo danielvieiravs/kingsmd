@@ -4,6 +4,9 @@ var autoprefixer = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
 var del = require('del');
 var gulp = require('gulp');
+var imagemin = require('gulp-imagemin');
+var mozjpeg = require('imagemin-mozjpeg');
+var pngquant = require('imagemin-pngquant');
 var htmlmin = require('gulp-htmlmin');
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
@@ -36,6 +39,19 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./dist/css'))
 });
 
+gulp.task('images', () =>
+    gulp.src('images/*')
+    .pipe(imagemin([
+        pngquant({
+            quality: '50'
+        }),
+        mozjpeg({
+            quality: '50'
+        })
+    ]))
+    .pipe(gulp.dest('dist/images'))
+);
+
 // Gulp task to minify JavaScript files
 gulp.task('scripts', function () {
     return gulp.src('./js/**/*.js')
@@ -52,6 +68,7 @@ gulp.task('clean', () => del(['dist']));
 gulp.task('default', ['clean'], function () {
     runSequence(
         'styles',
-        'scripts'
+        'scripts',
+        'images'
     );
 });
