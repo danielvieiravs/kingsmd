@@ -112,6 +112,7 @@
 	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
 	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
 	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="vendor/jquery.ripples/jquery.ripples-min.js"></script>
 	<script>
 		$('.cd100').countdown100({
 			endtimeYear: 2018,
@@ -121,6 +122,13 @@
 			endtimeMinutes: 0,
 			endtimeSeconds: 0,
 			timeZone: moment.tz.guess()
+		});
+		$('.overlay1').each(function() {
+		  $(this).ripples({
+		    resolution: 512,
+		    dropRadius: 20,
+		    perturbance: 0.04,
+		  });
 		});
 	</script>
 	<!--===============================================================================================-->
