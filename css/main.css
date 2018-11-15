@@ -405,6 +405,10 @@ Primary use:
   background-color: transparent;
 }
 
+.how-social img {
+  width: 3rem;
+}
+
 .how-social:hover {
   color: rgba(255, 255, 255, 0.2);
 }
