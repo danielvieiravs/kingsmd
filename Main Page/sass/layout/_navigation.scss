@@ -110,9 +110,14 @@
         transform: scale(80);
     }
 
+    &__checkbox~&__nav {
+        display: none;
+    }
+
     &__checkbox:checked~&__nav {
         opacity: 1;
         width: 100%;
+        display: block;
     }
 
     // ICON

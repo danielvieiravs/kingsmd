@@ -511,16 +511,38 @@ sas .btn-text:hover {
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
 
+.form__row {
+  display: inline-table;
+  width: 100%;
+  padding: 1rem 0; }
+
+.form__select {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 0.3rem;
+  background-color: #f5f5f5;
+  border: none;
+  border-bottom: .3rem solid transparent;
+  width: 100%;
+  display: block;
+  transition: all .3s;
+  background: white;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer; }
+
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
   color: inherit;
   padding: 1.5rem 2rem;
   border-radius: 0.3rem;
-  background-color: rgba(245, 245, 245, 0.5);
+  background-color: #f5f5f5;
   border: none;
   border-bottom: .3rem solid transparent;
-  width: 90%;
+  width: 100%;
   display: block;
   transition: all .3s; }
   @media only screen and (max-width: 56.25em) {
@@ -536,12 +558,9 @@ sas .btn-text:hover {
     color: #3f3f3f; }
 
 .form__label {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-left: 2rem;
-  margin-top: .7rem;
-  display: block;
-  transition: all .3s; }
+  display: block; }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
@@ -874,9 +893,13 @@ sas .btn-text:hover {
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
 
+.navigation__checkbox ~ .navigation__nav {
+  display: none; }
+
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
-  width: 100%; }
+  width: 100%;
+  display: block; }
 
 .navigation__icon {
   position: relative;
@@ -950,7 +973,7 @@ sas .btn-text:hover {
       padding: 10rem 0rem; } }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(245, 245, 245, 0.9) 0%, rgba(245, 245, 245, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-image: linear-gradient(90deg, rgba(245, 245, 245, 0.9) 0%, rgba(245, 245, 245, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(38, 38, 38, 0.2); }
