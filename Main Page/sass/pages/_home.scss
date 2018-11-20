@@ -13,12 +13,6 @@
     background-size: cover;
     margin-top: -10rem;
 
-    transform: skewY(-7deg);
-
-    &>* {
-        transform: skewY(7deg);
-    }
-
     @include respond(tab-port) {
         padding: 10rem 0;
     }
