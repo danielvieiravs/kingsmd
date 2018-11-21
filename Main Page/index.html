@@ -39,7 +39,7 @@
     </nav>
   </div>
 
-  <header class="header">
+  <header id="ripple-effect-id" class="header">
     <div class="header__text-box">
       <h1 class="heading-primary">
         <span class="heading-primary--main">Outdoors</span>
@@ -511,9 +511,11 @@
 
 
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.ripples-min.js"></script>
 <script src="js/datepicker.min.js"></script>
 <script>
   initScroll();
+  effectImage();
   contactForm()
   refreshScroll();
 
@@ -536,6 +538,16 @@
       $('#navigation-id').removeClass('navigation--scroll');
       $('#navigation-back-top').hide();
     }
+  }
+
+  function effectImage() {
+    $('#ripple-effect-id').each(function() {
+      $(this).ripples({
+        resolution: 512,
+        dropRadius: 20,
+        perturbance: 0.04,
+      });
+    });
   }
 
   function contactForm() {
