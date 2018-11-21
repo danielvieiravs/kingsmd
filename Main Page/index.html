@@ -304,13 +304,13 @@
                 Start booking now
               </h2>
             </div>
-            <form class="form" action="index.html">
+            <form class="form">
               <div class="form__row">
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Vehicle Information</label>
                   <div>
-                    <select name="year" id="Year" class="form__select">
-                      <option value="hide">-- Year, Model --</option>
+                    <select id="form-car" class="form__select" required>
+                      <option value="">-- Year, Model --</option>
                       <option value="2010">2010</option>
                       <option value="2011">2011</option>
                       <option value="2012">2012</option>
@@ -325,8 +325,8 @@
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Select Services</label>
                   <div>
-                    <select name="selectServices" id="selectServices" class="form__select">
-                      <option value="hide">-- Select Service --</option>
+                    <select id="form-service" class="form__select" required>
+                      <option value="">-- Select Service --</option>
                       <option value="1">Aluminum Repair</option>
                       <option value="2">Fender Repair</option>
                       <option value="3">Auto Painting</option>
@@ -340,13 +340,13 @@
               <div class="form__row">
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Appointment Date</label>
-                  <input type="text" class="form__input" id="datepicker" name="appointmentDate" data-toggle="datepicker">
+                  <input type="text" class="form__input" id="form-date" data-toggle="datepicker" placeholder="Appointment Date" autocomplete="off" required>
                 </div>
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Appointment Time</label>
                   <div>
-                    <select name="time" id="Time" class="form__select">
-                      <option value="hide">-- Choose --</option>
+                    <select id="form-time" class="form__select" required>
+                      <option value="">-- Choose --</option>
                       <option value="2010">09:00AM - 10:00AM</option>
                       <option value="2011">10:00AM - 11:00AM</option>
                       <option value="2012">11:00AM - 12:00PM</option>
@@ -363,30 +363,30 @@
                   </div>
                 </div>
               </div>
+              <div class="form__row col-md-12">
+                <label class="form__label">Contact Details</label>
+              </div>
               <div class="form__row">
-                <div class="form__row__item col-md-12">
-                  <label class="form__label">Contact Details</label>
+                <div class="form__row__item col-md-6">
+                  <input type="text" id="form-name" class="form__input" placeholder="Your Name" required>
                 </div>
                 <div class="form__row__item col-md-6">
-                  <input type="text" class="form__input" name="yourName" placeholder="Your Name" required="">
-                </div>
-                <div class="form__row__item col-md-6">
-                  <input type="email" class="form__input" name="yourEmail" placeholder="Your Email" required="">
+                  <input type="email" id="form-email" class="form__input" placeholder="Your Email" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12">
-                  <input type="text" class="form__input" name="yourPhone" placeholder="Your Phone" required="">
+                  <input type="text" id="form-phone" class="form__input" placeholder="Your Phone" required>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12">
-                  <textarea name="yourMessage" class="form__input" id="yourMessage" placeholder="Your Message" required=""></textarea>
+                  <textarea id="form-message" class="form__area" placeholder="Your Message" required></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
-                  <button class="btn theme-btn" type="submit">Submit Now</button>
+                  <button id="form-submit" type="submit" class="btn form__button">Submit Now</button>
                 </div>
               </div>
             </form>
@@ -512,8 +512,46 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/datepicker.min.js"></script>
 <script>
-  $('#datepicker').datepicker();
-  $('select').select();
+  $('#form-date').datepicker({
+    format: "dd/mm/yyyy"
+  }).on('change', function() {
+    $('#form-date').datepicker('hide');
+  });
+
+
+  $('#form-submit').off().on('click', function(e) {
+    var na = $('#form-name').val();
+    var em = $('#form-email').val();
+    var ph = $('#form-phone').val();
+    var ca = $('#form-car').val();
+    var se = $('#form-service').val();
+    var da = $('#form-date').val();
+    var ti = $('#form-time').val();
+    var me = $('#form-message').val();
+
+    if (na != '' && em != '' && ph != '' && ca != '' && se != '' && da != '' && ti != '' && me != '') {
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: {
+          'receiver': 'fabiovieira79@hotmail.com',
+          'name': na,
+          'email': em,
+          'phone': ph,
+          'car': ca,
+          'service': se,
+          'date': da,
+          'time': ti,
+          'message': me
+        },
+        success: function(res) {
+          console.log(res);
+        }
+      });
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  });
 </script>
 
 </html>
