@@ -304,7 +304,7 @@
                 Start booking now
               </h2>
             </div>
-            <form class="form">
+            <form id="form-contact" class="form">
               <div class="form__row">
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Vehicle Information</label>
@@ -518,7 +518,6 @@
     $('#form-date').datepicker('hide');
   });
 
-
   $('#form-submit').off().on('click', function(e) {
     var na = $('#form-name').val();
     var em = $('#form-email').val();
@@ -545,7 +544,7 @@
           'message': me
         },
         success: function(res) {
-          console.log(res);
+          $('#form-contact').trigger('reset');
         }
       });
       e.stopPropagation();
