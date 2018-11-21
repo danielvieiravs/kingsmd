@@ -1,20 +1,92 @@
 .navigation {
+    background: transparent;
+    height: 15rem;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+
+    &--scroll {
+        background: #fff;
+        height: 8.5rem;
+
+        .navigation__logo {
+            height: 8rem;
+        }
+
+        .navigation__button {
+            top: 2rem;
+            right: 2rem;
+            box-shadow: none;
+        }
+
+        .navigation__background {
+            top: 2.5rem;
+            right: 2.5rem;
+        }
+    }
+
+    &__backtop {
+        position: fixed;
+        right: 3rem;
+        bottom: 3rem;
+        width: 3rem;
+        height: 3rem;
+        z-index: 99;
+        background: #13b1cd;
+        border-radius: 100%;
+        text-align: center;
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+        cursor: pointer;
+        display: block;
+        padding: 0.8rem 0.1rem 0 0;
+
+        &__icon {
+            border: solid black;
+            border-width: 0 0.3rem 0.3rem 0;
+            display: inline-block;
+            padding: 0.5rem;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__logo {
+        height: 15rem;
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    }
+
     &__checkbox {
         display: none;
     }
 
     &__button {
         background-color: $color-white;
-        height: 7rem;
-        width: 7rem;
+        height: 5rem;
+        width: 5rem;
         position: fixed;
-        top: 6rem;
-        right: 6rem;
+        top: 4rem;
+        right: 4rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 
         @include respond(tab-port) {
             top: 4rem;
@@ -28,15 +100,18 @@
     }
 
     &__background {
-        height: 6rem;
-        width: 6rem;
+        height: 4rem;
+        width: 4rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 4.5rem;
+        right: 4.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
         transition: transform .8s;
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 
         @include respond(tab-port) {
             top: 4.5rem;
@@ -123,7 +198,7 @@
     // ICON
     &__icon {
         position: relative;
-        margin-top: 3.5rem;
+        margin-top: 2.5rem;
 
         &,
         &::before,

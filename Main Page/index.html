@@ -18,7 +18,11 @@
 </head>
 
 <body>
-  <div class="navigation">
+  <div id="navigation-id" class="navigation">
+    <div id="navigation-back-top" class="navigation__backtop"><i class="navigation__backtop__icon"></i></div>
+    <div class="navigation__logo-box">
+      <img src="img/logo-white.png" alt="Logo" class="navigation__logo">
+    </div>
     <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="navigation__button">
       <span class="navigation__icon">&nbsp;</span>
@@ -36,9 +40,6 @@
   </div>
 
   <header class="header">
-    <div class="header__logo-box">
-      <img src="img/logo-white.png" alt="Logo" class="header__logo">
-    </div>
     <div class="header__text-box">
       <h1 class="heading-primary">
         <span class="heading-primary--main">Outdoors</span>
@@ -509,48 +510,75 @@
 </body>
 
 
-<script src="js/jquery.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/datepicker.min.js"></script>
 <script>
-  $('#form-date').datepicker({
-    format: "dd/mm/yyyy"
-  }).on('change', function() {
-    $('#form-date').datepicker('hide');
-  });
+  initScroll();
+  contactForm()
+  refreshScroll();
 
-  $('#form-submit').off().on('click', function(e) {
-    var na = $('#form-name').val();
-    var em = $('#form-email').val();
-    var ph = $('#form-phone').val();
-    var ca = $('#form-car').val();
-    var se = $('#form-service').val();
-    var da = $('#form-date').val();
-    var ti = $('#form-time').val();
-    var me = $('#form-message').val();
+  function initScroll() {
+    $(window).scroll(function() {
+      refreshScroll();
+    });
+    $('#navigation-back-top').off().on('click', function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 600);
+    });
+  }
 
-    if (na != '' && em != '' && ph != '' && ca != '' && se != '' && da != '' && ti != '' && me != '') {
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: {
-          'receiver': 'fabiovieira79@hotmail.com',
-          'name': na,
-          'email': em,
-          'phone': ph,
-          'car': ca,
-          'service': se,
-          'date': da,
-          'time': ti,
-          'message': me
-        },
-        success: function(res) {
-          $('#form-contact').trigger('reset');
-        }
-      });
-      e.stopPropagation();
-      e.preventDefault();
+  function refreshScroll() {
+    if ($(window).scrollTop() > 0) {
+      $('#navigation-id').addClass('navigation--scroll');
+      $('#navigation-back-top').show();
+    } else {
+      $('#navigation-id').removeClass('navigation--scroll');
+      $('#navigation-back-top').hide();
     }
-  });
+  }
+
+  function contactForm() {
+    $('#form-date').datepicker({
+      format: "dd/mm/yyyy"
+    }).on('change', function() {
+      $('#form-date').datepicker('hide');
+    });
+
+    $('#form-submit').off().on('click', function(e) {
+      var na = $('#form-name').val();
+      var em = $('#form-email').val();
+      var ph = $('#form-phone').val();
+      var ca = $('#form-car').val();
+      var se = $('#form-service').val();
+      var da = $('#form-date').val();
+      var ti = $('#form-time').val();
+      var me = $('#form-message').val();
+
+      if (na != '' && em != '' && ph != '' && ca != '' && se != '' && da != '' && ti != '' && me != '') {
+        $.ajax({
+          type: "POST",
+          url: "mail.php",
+          data: {
+            'receiver': 'fabiovieira79@hotmail.com',
+            'name': na,
+            'email': em,
+            'phone': ph,
+            'car': ca,
+            'service': se,
+            'date': da,
+            'time': ti,
+            'message': me
+          },
+          success: function(res) {
+            $('#form-contact').trigger('reset');
+          }
+        });
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  }
 </script>
 
 </html>
