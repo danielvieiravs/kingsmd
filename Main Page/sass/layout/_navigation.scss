@@ -9,7 +9,7 @@
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 
     &--scroll {
-        background: $header-background-color;
+        background: $color-black-opacity;
     }
 
     &__backtop {
@@ -19,7 +19,7 @@
         width: 3rem;
         height: 3rem;
         z-index: 99;
-        background: #13b1cd;
+        background: $color-white-opacity;
         border-radius: 100%;
         text-align: center;
         transition-duration: 300ms;
@@ -28,6 +28,10 @@
         cursor: pointer;
         display: block;
         padding: 0.8rem 0.1rem 0 0;
+
+        &:hover {
+          background: $color-white;
+        }
 
         &__icon {
             border: solid black;
