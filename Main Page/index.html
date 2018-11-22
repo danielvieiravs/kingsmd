@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/datepicker.min.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/icon-font.css">
@@ -254,45 +255,15 @@
         </h2>
       </div>
       <div class="row">
-        <div class="story">
-          <figure class="story__shape">
-            <img class="story__img" src="img/nat-8.jpg" alt="Person on a tour">
-            <figcaption class="story__caption">
-              Mary Smith
-            </figcaption>
-          </figure>
-          <div class="story__text">
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              I had the best weekend with my family.
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus
-              quam nisi exercitationem omnis earum qui.
-            </p>
+        <div id="swiper-container-id" class="swiper-container uswiper">
+          <div id="swiper-wrapper-id" class="swiper-wrapper uswiper__wrapper">
+          </div>
+          <div class="swiper-pagination uswiper__pagination"></div>
+          <div class="swiper-button-next swiper-button-black uswiper__button">
+          </div>
+          <div class="swiper-button-prev swiper-button-black uswiper__button">
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="story">
-          <figure class="story__shape">
-            <img class="story__img" src="img/nat-9.jpg" alt="Person on a tour">
-            <figcaption class="story__caption">
-              Jack Wilson
-            </figcaption>
-          </figure>
-          <div class="story__text">
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              WOW! My life is completely different now.
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus
-              quam nisi exercitationem omnis earum qui.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="u-center-text u-margin-huge-big">
-        <a href="#" class="btn-text">Read all stories &rarr;</a>
       </div>
     </section>
 
@@ -509,15 +480,53 @@
      -->
 </body>
 
-
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery.ripples-min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script src="js/datepicker.min.js"></script>
 <script>
+  drawTestimonials();
   initScroll();
   effectImage();
   contactForm()
   refreshScroll();
+
+  function drawTestimonials() {
+    var testList = [{
+      text: '" I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "',
+      user: 'Jake Richardson / Google'
+    }, {
+      text: '" I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "',
+      user: 'Jake Richardson / Google'
+    }, {
+      text: '" I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "',
+      user: 'Jake Richardson / Google'
+    }, {
+      text: '" I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "',
+      user: 'Jake Richardson / Google'
+    }];
+    var html = '';
+    for (var i = 0; i < testList.length; i++) {
+      html +=
+        '<div class="swiper-slide uswiper__wrapper__panel">' +
+        '<div class="uswiper__wrapper__panel__content">' +
+        '<p class="uswiper__wrapper__panel__content__text">' + testList[i].text + '</p>' +
+        '<p class="uswiper__wrapper__panel__content__user">' + testList[i].user + '</p>' +
+        '</div>' +
+        '</div>';
+    }
+    $('#swiper-wrapper-id').append(html);
+    var swiper = new Swiper('#swiper-container-id', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
 
   function initScroll() {
     $(window).scroll(function() {
