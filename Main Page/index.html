@@ -231,9 +231,6 @@
           </div>
         </div>
       </div>
-      <div class="u-center-text u-margin-huge-big">
-        <a href="#" class="btn btn--green">Discover all tours</a>
-      </div>
     </section>
 
     <section id="section-stories" class="section-stories">
@@ -399,23 +396,6 @@
       </div>
     </div>
     <!-- End Links -->
-
-    <!-- Copyright -->
-    <div class="footer__separator">
-      <div class="container footer__container">
-        <div class="footer__row">
-          <div class="col-xs-6 footer__col">
-            <a href="index.html">
-              <img src="img/logo-white.png" alt="Logo" class="navigation__logo">
-            </a>
-          </div>
-          <div class="col-xs-6 footer__col footer__col__copyright">
-            <p>Kings Movement & Detailing</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Copyright -->
   </footer>
 
   <div class="popup" id="popup">
@@ -457,7 +437,9 @@
       .not('[href="#"]')
       .not('[href="#0"]')
       .click(function(event) {
-
+        if (this.hash.slice(1) == 'popup' || $('#popup').is(':visible')) {
+          return;
+        }
         if ($('.navigation__checkbox').prop('checked')) {
           $('.navigation__checkbox').prop('checked', false)
         }
