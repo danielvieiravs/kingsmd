@@ -808,7 +808,8 @@ sas .btn-text:hover {
     text-decoration: none !important;
     padding: 0 0 0.7rem 0;
     display: block;
-    font-weight: 300; }
+    font-weight: 300;
+    text-align: center; }
     .footer__row__opt__a:hover {
       color: #f5f5f5;
       font-weight: 400; }
@@ -1059,19 +1060,48 @@ sas .btn-text:hover {
     top: 0;
     transform: rotate(-135deg); }
 
+.section__about {
+  padding: 0 !important;
+  margin-top: 0 !important; }
+  .section__about__wrapper {
+    position: relative; }
+  .section__about__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(100% - 10rem);
+    background-size: cover;
+    background-position: center center;
+    background-image: url("../img/nat-1-large.jpg"); }
+  .section__about__container {
+    padding: 15rem 0 25rem; }
+    .section__about__container__col {
+      margin-right: 0 !important; }
+    .section__about__container__title__side {
+      padding-top: 5rem; }
+    .section__about__container__text {
+      color: #656565;
+      font-size: 1.6rem;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+
 .section-about {
   background-color: #f5f5f5;
   padding: 25rem 0;
   margin-top: -20vh; }
 
 .section-feature {
-  padding: 20rem 0;
+  padding: 20rem 0 30rem 0;
   background-image: linear-gradient(to right bottom, rgba(63, 63, 63, 0.8), rgba(38, 38, 38, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   margin-top: -10rem; }
   @media only screen and (max-width: 56.25em) {
     .section-feature {
-      padding: 10rem 0; } }
+      padding: 10rem 0 20rem 0; } }
 
 .section-tours {
   background-color: #f5f5f5;

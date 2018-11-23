@@ -1,0 +1,45 @@
+.section {
+  &__about {
+    padding: 0 !important;
+    margin-top: 0 !important;
+
+    &__wrapper {
+      position: relative;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: calc(100% - 10rem);
+      background-size: cover;
+      background-position: center center;
+      background-image: url("../img/nat-1-large.jpg");
+    }
+
+    &__container {
+      padding: 15rem 0 25rem;
+
+      &__col {
+        margin-right: 0 !important;
+      }
+
+      &__title {
+        &__side {
+          padding-top: 5rem;
+        }
+      }
+
+      &__text {
+        color: $color-grey-section-about;
+        font-size: $default-font-size;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    }
+  }
+}
