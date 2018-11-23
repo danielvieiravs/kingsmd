@@ -437,11 +437,12 @@
       .not('[href="#"]')
       .not('[href="#0"]')
       .click(function(event) {
-        if (this.hash.slice(1) == 'popup' || $('#popup').is(':visible')) {
-          return;
-        }
         if ($('.navigation__checkbox').prop('checked')) {
           $('.navigation__checkbox').prop('checked', false)
+        } else {
+          if (this.hash.slice(1) == 'popup' || $('#popup').is(':visible')) {
+            return;
+          }
         }
 
         // On-page links
