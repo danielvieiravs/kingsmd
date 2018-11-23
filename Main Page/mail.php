@@ -53,7 +53,11 @@
   </html>';
 
   $headers = "From: " . $email . "\r\n";
+  $headers .= "Reply-To: " . $email . "\r\n";
+  $headers .= "Return-Path: " . $email . "\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "X-Priority: 2\nX-MSmail-Priority: high";
+  $headers .= "X-Mailer: PHP". phpversion() ."\r\n";
   $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
   if (mail($receiver, $subject, $content, $headers)) {
