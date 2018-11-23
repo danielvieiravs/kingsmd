@@ -31,11 +31,11 @@
     <div class="navigation__background"></div>
     <nav class="navigation__nav">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> Natours</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular Tours</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+        <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
+        <li class="navigation__item"><a href="#section-feature" class="navigation__link">Features</a></li>
+        <li class="navigation__item"><a href="#section-tours" class="navigation__link">Services</a></li>
+        <li class="navigation__item"><a href="#section-stories" class="navigation__link">Testimonials</a></li>
+        <li class="navigation__item"><a href="#section-book" class="navigation__link">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -43,15 +43,15 @@
   <header id="ripple-effect-id" class="header">
     <div class="header__text-box">
       <h1 class="heading-primary">
-        <span class="heading-primary--main">Outdoors</span>
-        <span class="heading-primary--sub">is where life happens</span>
+        <span class="heading-primary--main">Kings</span>
+        <span class="heading-primary--sub">Movement & Detailing</span>
       </h1>
-      <a href="#section-tours" class="btn btn--white btn--animated">Discovery our tours</a>
+      <a href="#section-about" class="btn btn--white btn--animated">Learn More</a>
     </div>
   </header>
 
   <main>
-    <section class="section-about">
+    <section id="section-about" class="section-about">
       <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">
           Exciting tours for adventurous people
@@ -79,7 +79,7 @@
         </div>
       </div>
     </section>
-    <section class="section-feature">
+    <section id="section-feature" class="section-feature">
       <div class="row">
         <div class="col-1-of-4">
           <div class="feature-box">
@@ -120,7 +120,7 @@
       </div>
     </section>
 
-    <section class="section-tours" id="section-tours">
+    <section id="section-tours" class="section-tours">
       <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">
           Most popular tours
@@ -241,7 +241,7 @@
       </div>
     </section>
 
-    <section class="section-stories">
+    <section id="section-stories" class="section-stories">
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
           <source src="img/video.mp4" type="video/mp4">
@@ -267,7 +267,7 @@
       </div>
     </section>
 
-    <section class="section-book">
+    <section id="section-book" class="section-book">
       <div class="row">
         <div class="book">
           <div class="book__form">
@@ -370,31 +370,57 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__logo-box">
-
-      <picture class="footer_logo">
-        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x," media="(max-width: 37.5em)">
-        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
-      </picture>
-    </div>
-    <div class="row">
-      <div class="col-1-of-2">
-        <div class="footer__navigation">
-          <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-          </ul>
+    <!-- Links -->
+    <div>
+      <div class="container footer__container">
+        <div class="row footer__row">
+          <div class="col-sm-2 footer__col">
+            <ul class="list-unstyled">
+              <li class="footer__row__opt"><a href="#section-about" class="footer__row__opt__a">About</a></li>
+              <li class="footer__row__opt"><a href="#section-feature" class="footer__row__opt__a">Features</a></li>
+              <li class="footer__row__opt"><a href="#section-tours" class="footer__row__opt__a">Services</a></li>
+              <li class="footer__row__opt"><a href="#section-stories" class="footer__row__opt__a">Testimonials</a></li>
+              <li class="footer__row__opt"><a href="#section-book" class="footer__row__opt__a">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-2 footer__col">
+            <ul class="list-unstyled">
+              <li class="footer__row__opt"><a href="https://www.facebook.com/JKing-Movements-Detailing-803552906699190/" target="_blank" class="footer__row__opt__a">Facebook</a></li>
+              <li class="footer__row__opt"><a href="https://www.instagram.com/jking_movements_and_detailing/?fbclid=IwAR2sadkWpDhWwMcJWRJhQ857otmJwtLxu7BEsFhODb5IYsJ8pt_SRoOds7s" target="_blank" class="footer__row__opt__a">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-2 footer__col">
+            <ul class="list-unstyled">
+              <li class="footer__row__opt"><a class="footer__row__opt__a">Subscribe to Our Newsletter</a></li>
+              <li class="footer__row__opt"><a class="footer__row__opt__a">Privacy Policy</a></li>
+              <li class="footer__row__opt"><a class="footer__row__opt__a">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 footer__col footer__row__desc">
+            <h3 class="footer__row__desc__title">Kings Movement & Detailing</h3>
+            <p class="footer__row__desc__info">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
+          </div>
         </div>
       </div>
-      <div class="col-1-of-2">
-        <p class="footer__copyright">
-          Built my <a href="#" class="footer__link">Daniel Vieira</a>
-        </p>
+    </div>
+    <!-- End Links -->
+
+    <!-- Copyright -->
+    <div class="footer__separator">
+      <div class="container footer__container">
+        <div class="row footer__row">
+          <div class="col-xs-6 footer__col">
+            <a href="index.html">
+              <img src="img/logo-white.png" alt="Logo" class="navigation__logo">
+            </a>
+          </div>
+          <div class="col-xs-6 footer__col footer__col__copyright">
+            <p>Kings Movement & Detailing</p>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- End Copyright -->
   </footer>
 
   <div class="popup" id="popup">
@@ -414,70 +440,7 @@
       </div>
     </div>
   </div>
-  <!--
-     <section class="grid-test">
-        <div class="row">
-            <div class="col-1-of-2">
-                Col 1 of 2
-            </div>
-            <div class="col-1-of-2">
-                Col 1 of 2
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-2-of-3">
-                Col 2 of 3
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-2-of-4">
-                Col 2 of 4
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-3-of-4">
-                Col 3 of 4
-            </div>
-        </div>
-     </section>
-     -->
+
 </body>
 
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -486,10 +449,54 @@
 <script src="js/datepicker.min.js"></script>
 <script>
   drawTestimonials();
+  navigation();
   initScroll();
   effectImage();
   contactForm()
   refreshScroll();
+
+  function navigation() {
+    // Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+
+        if ($('.navigation__checkbox').prop('checked')) {
+          $('.navigation__checkbox').prop('checked', false)
+        }
+
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+  }
 
   function drawTestimonials() {
     var testList = [{

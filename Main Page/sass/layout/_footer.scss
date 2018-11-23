@@ -1,10 +1,66 @@
 .footer {
     background-color: $color-grey-dark-3;
-    padding: 10rem;
+    padding: 0;
     font-size: 1.4rem;
 
     @include respond(tab-port) {
         padding: 8rem 0;
+    }
+
+    &__separator {
+        border-top: 0.1rem solid $color-grey-light-4;
+    }
+
+    &__container {
+        padding: 5rem 0;
+    }
+
+    &__row {
+      &__opt {
+        &__a {
+          color: $color-white-footer;
+          cursor: pointer;
+          font-size: $default-font-size;
+          text-decoration: none !important;
+          padding: 0 0 0.7rem 0;
+          display: block;
+          font-weight: 300;
+
+          &:hover {
+            color: $color-white;
+            font-weight: 400;
+          }
+        }
+
+        &:last-child {
+          &__a {
+            padding: 0;
+          }
+        }
+      }
+
+      &__desc {
+        &__title {
+          font-size: $title-small-font-size;
+          margin-top: 0 !important;
+          color: $color-white !important;
+        }
+
+        &__info {
+          font-size: $default-font-size;
+          color: $color-white-footer !important;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__col {
+      margin-right: 0 !important;
+
+      &__copyright {
+        text-align: end;
+        padding: 4rem 4rem 0 0;
+      }
     }
 
     &__logo-box {

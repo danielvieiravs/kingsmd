@@ -9,7 +9,7 @@
     position: relative;
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-        height: 95vh;
+        height: 100vh;
     }
 
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
