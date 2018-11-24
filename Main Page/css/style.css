@@ -769,7 +769,7 @@ sas .btn-text:hover {
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom, rgba(38, 38, 38, 0.8), rgba(63, 63, 63, 0.8)), url(../img/hero-small.jpg);
+  background-image: url(https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&h=650&w=940%201x,%20https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940%202x);
   background-size: cover;
   background-position: top;
   position: relative; }
