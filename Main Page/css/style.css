@@ -1050,12 +1050,12 @@ sas .btn-text:hover {
     position: absolute;
     top: 0;
     right: 0;
-    height: calc(100% - 10rem);
+    height: 100%;
     background-size: cover;
     background-position: center center;
     background-image: url("../img/nat-1-large.jpg"); }
   .section__about__container {
-    padding: 15rem 0 25rem; }
+    padding: 15rem 0; }
     .section__about__container__col {
       margin-right: 0 !important; }
     .section__about__container__title__side {
