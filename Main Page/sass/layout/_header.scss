@@ -9,12 +9,6 @@
     height: 100vh;
   }
 
-  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-    (min-width: 125em),
-    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-    (min-width: 125em) {
-  }
-
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
