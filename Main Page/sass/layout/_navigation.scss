@@ -9,7 +9,7 @@
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 
     &--scroll {
-        background: $color-black-opacity;
+        background: $color-tertiary-dark;
     }
 
     &__backtop {
@@ -32,11 +32,11 @@
         font-size: 2rem;
 
         &:hover {
-          background: $color-white;
+            background: $color-white;
         }
 
         &__icon {
-          color: $color-primary-dark;
+            color: $color-primary-dark;
         }
     }
 
@@ -47,7 +47,7 @@
     }
 
     &__logo {
-        height: 8rem;
+        height: 10rem;
     }
 
     &__checkbox {
@@ -134,9 +134,7 @@
 
         &:hover,
         &:active {
-            background-position: 100%;
-            color: $color-primary;
-            transform: translateX(1rem);
+            transform: scale(1.3);
         }
     }
 

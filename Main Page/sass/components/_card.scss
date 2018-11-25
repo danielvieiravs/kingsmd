@@ -23,27 +23,6 @@
             background-color: $color-white;
         }
 
-        &--back {
-            transform: rotateY(-180deg);
-
-            &-1 {
-                background-image: linear-gradient(to right bottom,
-                    $color-secondary-light,
-                    $color-secondary-dark);
-            }
-
-            &-2 {
-                background-image: linear-gradient(to right bottom,
-                    $color-primary-light,
-                    $color-primary-dark);
-            }
-
-            &-3 {
-                background-image: linear-gradient(to right bottom,
-                    $color-tertiary-light,
-                    $color-tertiary-dark);
-            }
-        }
     }
 
     &:hover &__side--front {
@@ -59,8 +38,8 @@
         background-size: cover;
         height: 23rem;
         background-blend-mode: screen;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         border-top-left-radius: .3rem;
         border-top-right-radius: .3rem;
 
@@ -145,74 +124,36 @@
 
     // FRONT SIDE STYLING
     &__cta {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
         width: 90%;
+        padding: 0 0 1rem;
         text-align: center;
     }
 
-    &__price-box {
-        text-align: center;
-        color: $color-white;
-        margin-bottom: 8rem;
-    }
+    height: auto;
+    border-radius: $border-radius-small;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
-    &__price-only {
-        font-size: 1.4rem;
-        text-rendering: uppercase
-    }
-
-    &__price-value {
-        font-size: 6rem;
-        font-weight: 100;
-    }
-
-    // @include respond(tab-port) {
-    @media only screen and (max-width: 56.25em),
-    only screen and (hover: none) {
-
+    &__side {
         height: auto;
-        border-radius: $border-radius-small;
-        background-color: $color-white;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        position: relative;
+        box-shadow: none;
 
-        &__side {
-            height: auto;
-            position: relative;
-            box-shadow: none;
-
-            &--back {
-                transform: rotateY(0);
-                clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%)
-            }
-        }
-
-        &:hover &__side--front {
+        &--back {
             transform: rotateY(0);
         }
-
-        &__details {
-            padding: 0 3rem;
-        }
-
-        // FRONT SIDE STYLING
-        &__cta {
-            position: relative;
-            top: 0;
-            left: 0;
-            transform: translate(0);
-            width: 100%;
-            padding: 7rem 4rem 4rem;
-        }
-
-        &__price-box {
-            margin-bottom: 3rem;
-        }
-
-        &__price-value {
-            font-size: 4rem;
-        }
     }
+
+    &:hover &__side--front {
+        transform: rotateY(0);
+    }
+
+    &__details {
+        padding: 0 3rem;
+    }
+
 }

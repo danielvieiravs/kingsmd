@@ -28,4 +28,13 @@
         transform: translateY(-1.5rem) scale(1.03);
     }
 
+    &__button {
+        text-decoration: none !important;
+        color: $color-secondary-dark;
+
+        &:hover {
+            color: $color-tertiary-light;
+        }
+    }
+
 }

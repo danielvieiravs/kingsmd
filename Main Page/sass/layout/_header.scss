@@ -33,21 +33,26 @@
     }
 
     &__button {
-      text-decoration: none !important;
-      color: $color-white !important;
-      font-size: $title-small-font-size;
-      text-transform: uppercase;
+        text-decoration: none !important;
+        color: $color-white !important;
+        font-size: $title-small-font-size;
+        text-transform: uppercase;
+        top: 85%;
+        left: 45%;
+        position: absolute;
+        text-align: center;
 
-      &:hover {
-        font-weight: bold;
-      }
+        &:hover {
+            font-weight: bold;
+        }
 
-      &__icon {
-        display: block;
-      }
+        &__icon {
+            display: block;
+        }
 
-      &__text {
-        margin: 0 !important;
-      }
+        &__text {
+            margin: 0 !important;
+            font-size: $font-button-size-learn-more;
+        }
     }
 }
