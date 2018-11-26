@@ -909,6 +909,18 @@ sas .btn-text:hover {
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .navigation--scroll {
     background: #262626; }
+  .navigation__bar {
+    float: right;
+    font-size: 2rem;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    .navigation__bar__tab {
+      color: #f5f5f5 !important;
+      padding: 0 1rem; }
+      .navigation__bar__tab:hover {
+        font-weight: bold; }
   .navigation__backtop {
     position: fixed;
     right: 3rem;
@@ -1017,7 +1029,7 @@ sas .btn-text:hover {
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
       width: 3rem;
       height: .2rem;
-      background-color: #888;
+      background-color: #f5f5f5;
       display: inline-block; }
     .navigation__icon::before, .navigation__icon::after {
       content: "";
