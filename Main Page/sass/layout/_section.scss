@@ -1,5 +1,5 @@
 .section {
-  &__about {
+  &__geral {
     padding: 0 !important;
     margin-top: 0 !important;
 
@@ -14,11 +14,18 @@
       height: 100%;
       background-size: cover;
       background-position: center center;
-      background-image: url("../img/nat-1-large.jpg");
+
+      &--about {
+        background-image: url("../img/nat-1-large.jpg");
+      }
+
+      &--contact {
+        background-image: url("../img/nat-10.jpg");
+      }
     }
 
     &__container {
-      padding: 15rem 0;
+      padding: 10rem 0;
 
       &__col {
         margin-right: 0 !important;
