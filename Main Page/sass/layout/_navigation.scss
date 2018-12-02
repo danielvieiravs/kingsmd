@@ -12,11 +12,6 @@
         background: $color-tertiary-dark;
     }
 
-    &--active {
-      color: $color-white !important;
-      font-weight: bold !important;
-    }
-
     &__bar {
         float: right;
         font-size: 2rem;
@@ -38,6 +33,11 @@
                 font-weight: bold;
             }
         }
+    }
+
+    &--active {
+      color: $color-white !important;
+      font-weight: bold !important;
     }
 
     &__backtop {

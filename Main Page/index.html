@@ -190,9 +190,9 @@
             </div>
 
             <div class="section__book__form__tabs">
-              <a id="form-contact-tab-1" class="section__book__form__tabs__text">Details</a>
-              <a id="form-contact-tab-2" class="section__book__form__tabs__text section__book__form__tabs--disabled">Appointment</a>
-              <a id="form-contact-tab-3" class="section__book__form__tabs__text section__book__form__tabs--disabled">Vehicle</a>
+              <a id="form-contact-tab-1" class="section__book__form__tabs__text">Vehicle Movements</a>
+              <a id="form-contact-tab-2" class="section__book__form__tabs__text">Detailing</a>
+              <a id="form-contact-tab-3" class="section__book__form__tabs__text">Events</a>
             </div>
 
             <!-- form 1 -->
@@ -215,7 +215,7 @@
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
-                  <button id="form-submit-1" type="submit" class="btn form__button">Continue</button>
+                  <button type="submit" class="btn form__button">Submit Now</button>
                 </div>
               </div>
             </form>
@@ -250,7 +250,7 @@
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
-                  <button id="form-submit-2" type="submit" class="btn form__button">Continue</button>
+                  <button type="submit" class="btn form__button">Submit Now</button>
                 </div>
               </div>
             </form>
@@ -296,7 +296,7 @@
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
-                  <button id="form-submit-3" type="submit" class="btn form__button">Submit Now</button>
+                  <button type="submit" class="btn form__button">Submit Now</button>
                 </div>
               </div>
             </form>
@@ -377,14 +377,6 @@
   effectImage();
   contactForm()
   refreshScroll();
-
-  $('#section-feature').parallax({
-    imageSrc: 'img/nat-4.png'
-  });
-
-  // $('#section-book').parallax({
-  //   imageSrc: 'img/nat-10.jpg'
-  // });
 
   function navigation() {
     // Select all links with hashes
@@ -478,6 +470,12 @@
         scrollTop: 0
       }, 600);
     });
+    $('#section-feature').parallax({
+      imageSrc: 'img/nat-4.png'
+    });
+    $('#section-book').parallax({
+      imageSrc: 'img/nat-10.jpg'
+    });
   }
 
   function refreshScroll() {
@@ -536,64 +534,22 @@
       showTab(3);
     });
 
-    $('#form-submit-1').off().on('click', function(e) {
-      var na = $('#form-name').val();
-      var em = $('#form-email').val();
-      var ph = $('#form-phone').val();
-
-      if (na != '' && em != '' && ph != '') {
-        showTab(2);
-        $('#form-contact-tab-2').removeClass('section__book__form__tabs--disabled');
-        e.stopPropagation();
-        e.preventDefault();
-      }
+    $('#form-contact-1').on('submit', function(e) {
+      resetForms();
+      alert('1');
+      e.preventDefault();
     });
 
-    $('#form-submit-2').off().on('click', function(e) {
-      var da = $('#form-date').val();
-      var ti = $('#form-time').val();
-
-      if (da != '' && ti != '') {
-        showTab(3);
-        $('#form-contact-tab-3').removeClass('section__book__form__tabs--disabled');
-        e.stopPropagation();
-        e.preventDefault();
-      }
+    $('#form-contact-2').on('submit', function(e) {
+      resetForms();
+      alert('2');
+      e.preventDefault();
     });
 
-    $('#form-submit-3').off().on('click', function(e) {
-      var na = $('#form-name').val();
-      var em = $('#form-email').val();
-      var ph = $('#form-phone').val();
-      var da = $('#form-date').val();
-      var ti = $('#form-time').val();
-
-      var ca = $('#form-car').val();
-      var se = $('#form-service').val();
-      var me = $('#form-message').val();
-
-      if (ca != '' && se != '' && me != '') {
-        $.ajax({
-          type: "POST",
-          url: "mail.php",
-          data: {
-            'receiver': 'fabiovieira79@hotmail.com',
-            'name': na,
-            'email': em,
-            'phone': ph,
-            'car': ca,
-            'service': se,
-            'date': da,
-            'time': ti,
-            'message': me
-          },
-          success: function(res) {
-            resetForms();
-          }
-        });
-        e.stopPropagation();
-        e.preventDefault();
-      }
+    $('#form-contact-3').on('submit', function(e) {
+      resetForms();
+      alert('3');
+      e.preventDefault();
     });
 
     function showTab(active) {
@@ -607,9 +563,27 @@
       $('#form-contact-1').trigger('reset');
       $('#form-contact-2').trigger('reset');
       $('#form-contact-3').trigger('reset');
-      showTab(1);
-      $('#form-contact-tab-2').addClass('section__book__form__tabs--disabled');
-      $('#form-contact-tab-3').addClass('section__book__form__tabs--disabled');
+    }
+
+    function sendEmail() {
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: {
+          'receiver': 'fabiovieira79@hotmail.com',
+          'name': na,
+          'email': em,
+          'phone': ph,
+          'car': ca,
+          'service': se,
+          'date': da,
+          'time': ti,
+          'message': me
+        },
+        success: function(res) {
+          resetForms();
+        }
+      });
     }
   }
 </script>
