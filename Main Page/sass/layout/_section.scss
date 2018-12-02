@@ -1,4 +1,5 @@
 .section {
+
   &__about,
   &__book,
   &__feature,
@@ -40,8 +41,7 @@
 
   &__book {
     padding: 0;
-    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-    background-image: linear-gradient(90deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 100%, transparent 100%), url("../img/nat-10.jpg");
+    background-color: #fff;
     background-repeat: inherit;
 
     &__wrapper {
