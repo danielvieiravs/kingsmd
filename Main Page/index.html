@@ -196,21 +196,131 @@
             </div>
 
             <!-- form 1 -->
-            <form id="form-contact-1" class="form">
-              <div class="form__row col-md-12">
-                <label class="form__label">Contact Details</label>
-              </div>
+            <form id="form-contact-1" class="form form-contact-iteration">
               <div class="form__row">
                 <div class="form__row__item col-md-6">
-                  <input type="text" id="form-name" class="form__input" placeholder="Your Name" required>
+                  <label class="form__label">Type</label>
+                  <div>
+                    <select class="form__select" required>
+                      <option value="">-- type --</option>
+                      <option value="external">Trade Plated Drive</option>
+                      <option value="internal">Transported</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="form__row__item col-md-6">
-                  <input type="email" id="form-email" class="form__input" placeholder="Your Email" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
+                  <label class="form__label">Vehicle</label>
+                  <div>
+                    <select class="form__select" required>
+                      <option data-active="contact-form-1-vehicle" value="">-- vehicle --</option>
+                      <option data-active="contact-form-1-vehicle" value="new">New</option>
+                      <option data-active="contact-form-1-vehicle" value="used">Used</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
-              <div class="form__row">
-                <div class="form__row__item col-md-12">
-                  <input type="text" id="form-phone" class="form__input" placeholder="Your Phone" required>
+                <div data-changed="contact-form-1-vehicle" data-active="used" class="form__row__item col-md-6">
+                  <label class="form__label">Vehicle Registration</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div data-changed="contact-form-1-vehicle" data-active="new" class="form__row__item col-md-6">
+                  <label class="form__label">Last 8 digit of a chassis</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Vehicle information</label>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Make</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Model</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Colour</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Year</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Vehicle Weight (Kg)</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">One way OR Return</label>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Return address</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Return date</label>
+                  <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Transfer</label>
+                  <div>
+                    <select class="form__select" required>
+                      <option value="">-- transfer --</option>
+                      <option value="hand_over">Hand over</option>
+                      <option value="dealer_transfer">Dealer Transfer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Collection point A</label>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Full address</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Post code</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Point of Contact</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Collection point B</label>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Full address</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Post code</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Point of Contact</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">In</label>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Date</label>
+                  <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Time</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Out</label>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Date</label>
+                  <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Time</label>
+                  <input type="text" class="form__input" required>
                 </div>
               </div>
               <div class="form__row">
@@ -221,31 +331,100 @@
             </form>
 
             <!-- form 2 -->
-            <form id="form-contact-2" class="form section__book--hidden">
+            <form id="form-contact-2" class="form section__book--hidden form-contact-iteration">
               <div class="form__row">
                 <div class="form__row__item col-md-6">
-                  <label class="form__label">Appointment Date</label>
-                  <input type="text" class="form__input" id="form-date" data-toggle="datepicker" placeholder="Appointment Date" autocomplete="off" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Appointment Time</label>
+                  <label class="form__label">Type</label>
                   <div>
-                    <select id="form-time" class="form__select" required>
-                      <option value="">-- Choose --</option>
-                      <option value="2010">09:00AM - 10:00AM</option>
-                      <option value="2011">10:00AM - 11:00AM</option>
-                      <option value="2012">11:00AM - 12:00PM</option>
-                      <option value="2013">12:00PM - 01:00PM</option>
-                      <option value="2014">01:00PM - 02:00PM</option>
-                      <option value="2015">02:00PM - 03:00PM</option>
-                      <option value="2015">03:00PM - 04:00PM</option>
-                      <option value="2015">04:00PM - 05:00PM</option>
-                      <option value="2015">05:00PM - 06:00PM</option>
-                      <option value="2015">06:00PM - 07:00PM</option>
-                      <option value="2015">07:00PM - 08:00PM</option>
-                      <option value="2015">08:00PM - 09:00PM</option>
+                    <select class="form__select" required>
+                      <option value="">-- type --</option>
+                      <option value="external">External</option>
+                      <option value="internal">Internal</option>
+                      <option value="machine_polishing">Machine Polishing</option>
+                      <option value="full_detailing">Full detailing</option>
                     </select>
                   </div>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Vehicle</label>
+                  <div>
+                    <select class="form__select" required>
+                      <option data-active="contact-form-2-vehicle" value="">-- vehicle --</option>
+                      <option data-active="contact-form-2-vehicle" value="new">New</option>
+                      <option data-active="contact-form-2-vehicle" value="used">Used</option>
+                    </select>
+                  </div>
+                </div>
+                <div data-changed="contact-form-2-vehicle" data-active="used" class="form__row__item col-md-6">
+                  <label class="form__label">Vehicle Registration</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div data-changed="contact-form-2-vehicle" data-active="new" class="form__row__item col-md-6">
+                  <label class="form__label">Last 8 digit of a chassis</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Vehicle information</label>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Make</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Model</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Colour</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Year</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Customer Address</label>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Full address</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Post code</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Point of Contact</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item">
+                  <label class="form__label">Vehicle Address</label>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Full address</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Post code</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-4">
+                  <label class="form__label">Info</label>
+                  <div>
+                    <select class="form__select" required>
+                      <option value="">-- info --</option>
+                      <option value="indoor">Indoor</option>
+                      <option value="outdoor">Outdoor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Set up Date After or Before Xam/pm</label>
+                  <input type="text" class="form__input" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Set down Date After or Before Xam/pm</label>
+                  <input type="text" class="form__input" required>
                 </div>
               </div>
               <div class="form__row">
@@ -256,42 +435,54 @@
             </form>
 
             <!-- form 3 -->
-            <form id="form-contact-3" class="form section__book--hidden">
+            <form id="form-contact-3" class="form section__book--hidden form-contact-iteration">
               <div class="form__row">
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Vehicle Information</label>
-                  <div>
-                    <select id="form-car" class="form__select" required>
-                      <option value="">-- Year, Model --</option>
-                      <option value="2010">2010</option>
-                      <option value="2011">2011</option>
-                      <option value="2012">2012</option>
-                      <option value="2013">2013</option>
-                      <option value="2014">2014</option>
-                      <option value="2015">2015</option>
-                      <option value="2016">2016</option>
-                      <option value="2017">2017</option>
-                    </select>
+                <div class="form__row">
+                  <div class="form__row__item">
+                    <label class="form__label">Event Name</label>
+                    <input type="text" class="form__input" required>
                   </div>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Select Services</label>
-                  <div>
-                    <select id="form-service" class="form__select" required>
-                      <option value="">-- Select Service --</option>
-                      <option value="1">Aluminum Repair</option>
-                      <option value="2">Fender Repair</option>
-                      <option value="3">Auto Painting</option>
-                      <option value="4">Oil Change</option>
-                      <option value="4">Collision Repair</option>
-                      <option value="4">Break Repair</option>
-                    </select>
+                  <div class="form__row__item">
+                    <label class="form__label">Event Date</label>
                   </div>
-                </div>
-              </div>
-              <div class="form__row">
-                <div class="form__row__item col-md-12">
-                  <textarea id="form-message" class="form__area" placeholder="Your Message" required></textarea>
+                  <div class="form__row__item col-md-6">
+                    <label class="form__label">To</label>
+                    <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
+                  </div>
+                  <div class="form__row__item col-md-6">
+                    <label class="form__label">From</label>
+                    <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
+                  </div>
+                  <div class="form__row__item">
+                    <label class="form__label">Event Time</label>
+                  </div>
+                  <div class="form__row__item col-md-6">
+                    <label class="form__label">Start</label>
+                    <input type="text" class="form__input" required>
+                  </div>
+                  <div class="form__row__item col-md-6">
+                    <label class="form__label">End</label>
+                    <input type="text" class="form__input" required>
+                  </div>
+                  <div class="form__row__item">
+                    <label class="form__label">Event Location</label>
+                  </div>
+                  <div class="form__row__item col-md-4">
+                    <label class="form__label">Full address</label>
+                    <input type="text" class="form__input" required>
+                  </div>
+                  <div class="form__row__item col-md-4">
+                    <label class="form__label">Post code</label>
+                    <input type="text" class="form__input" required>
+                  </div>
+                  <div class="form__row__item col-md-4">
+                    <label class="form__label">Point of Contact</label>
+                    <input type="text" class="form__input" required>
+                  </div>
+                  <div class="form__row__item">
+                    <label class="form__label">How many units?</label>
+                    <input type="text" class="form__input" required>
+                  </div>
                 </div>
               </div>
               <div class="form__row">
@@ -473,9 +664,9 @@
     $('#section-feature').parallax({
       imageSrc: 'img/nat-4.png'
     });
-    $('#section-book').parallax({
-      imageSrc: 'img/nat-10.jpg'
-    });
+    // $('#section-book').parallax({
+    //   imageSrc: 'img/nat-10.jpg'
+    // });
   }
 
   function refreshScroll() {
@@ -515,10 +706,30 @@
   }
 
   function contactForm() {
-    $('#form-date').datepicker({
-      format: "dd/mm/yyyy"
-    }).on('change', function() {
-      $('#form-date').datepicker('hide');
+    $('.form-date-id').each(function() {
+      $(this).datepicker({
+        format: "dd/mm/yyyy"
+      }).on('change', function() {
+        $(this).datepicker('hide');
+      });
+    });
+
+    resetForms();
+    $('.form-contact-iteration').each(function() {
+      $(this).find('select').on('change', function() {
+        var acOpt = $(this).find('option:selected').data('active');
+        if (acOpt) {
+          var valOpt = $(this).find('option:selected').val();
+          $('.form__row__item').each(function() {
+            if ($(this).data('changed') == acOpt && $(this).data('active') == valOpt) {
+              $(this).removeClass('form__row__item--disabled');
+            } else if ($(this).data('changed') == acOpt && $(this).data('active') !== valOpt) {
+              $(this).find('input').val('');
+              $(this).addClass('form__row__item--disabled');
+            }
+          });
+        }
+      });
     });
     showTab(1);
 
@@ -563,6 +774,11 @@
       $('#form-contact-1').trigger('reset');
       $('#form-contact-2').trigger('reset');
       $('#form-contact-3').trigger('reset');
+      $('.form__row__item').each(function() {
+        if ($(this).data('changed')) {
+          $(this).addClass('form__row__item--disabled');
+        }
+      });
     }
 
     function sendEmail() {

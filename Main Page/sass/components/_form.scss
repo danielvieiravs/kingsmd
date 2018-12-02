@@ -1,185 +1,188 @@
 .form {
-    &__group:not(:last-child) {
-        margin-bottom: 2rem;
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__row {
+    display: inline-table;
+    width: 100%;
+
+    &__item {
+      padding: 0 1rem 1rem;
+
+      &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__select {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: $border-radius-small;
+    background-color: $color-white;
+    border: none;
+    border-bottom: 0.3rem solid transparent;
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+    background: white;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  &__button {
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    background: $color-grey-light-1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    outline: none !important;
+    margin-top: 25px;
+
+    &:hover {
+      color: #fff;
+      transform: translateY(0);
     }
 
-    &__row {
-        display: inline-table;
-        width: 100%;
-
-        &__item {
-            padding: 0 1rem 1rem 1rem;
-        }
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $color-tertiary-dark;
+      border-radius: 100%;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
     }
 
-    &__select {
-        font-size: 1.5rem;
-        font-family: inherit;
-        color: inherit;
-        padding: 1.5rem 2rem;
-        border-radius: $border-radius-small;
-        background-color: $color-white;
-        border: none;
-        border-bottom: .3rem solid transparent;
-        width: 100%;
-        display: block;
-        transition: all .3s;
-        background: white;
-        outline: none;
-        box-shadow: none;
-        cursor: pointer;
+    &:active,
+    &:focus,
+    &:hover {
+      color: white;
     }
 
-    &__button {
-        display: inline-block;
-        vertical-align: middle;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        position: relative;
-        overflow: hidden;
-        background: $color-grey-light-1;
-        -webkit-transition-property: color;
-        transition-property: color;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        outline: none !important;
-        margin-top: 25px;
+    &:active:before,
+    &:focus:before,
+    &:hover:before {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+    }
+  }
 
-        &:hover {
-            color: #fff;
-            transform: translateY(0);
-        }
+  &__area {
+    resize: vertical;
+  }
 
-        &:before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: $color-tertiary-dark;
-            border-radius: 100%;
-            -webkit-transform: scale(0);
-            transform: scale(0);
-            -webkit-transition-property: transform;
-            transition-property: transform;
-            -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-            -webkit-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: white;
-        }
-
-        &:hover:before,
-        &:focus:before,
-        &:active:before {
-            -webkit-transform: scale(2);
-            transform: scale(2);
-        }
+  &__area,
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: $border-radius-small;
+    background-color: $color-white;
+    border: none;
+    border-bottom: 0.3rem solid transparent;
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+    @include respond(tab-port) {
+      width: 100%;
     }
 
-    &__area {
-        resize: vertical;
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, .1);
+      border-bottom: 0.3rem solid $color-primary;
+
+      &:invalid {
+        border-bottom: 0.3rem solid $color-secondary-dark;
+      }
     }
 
-    &__input,
-    &__area {
-        font-size: 1.5rem;
-        font-family: inherit;
-        color: inherit;
-        padding: 1.5rem 2rem;
-        border-radius: $border-radius-small;
-        background-color: $color-white;
-        border: none;
-        border-bottom: .3rem solid transparent;
-        width: 100%;
-        display: block;
-        transition: all .3s;
-
-        @include respond(tab-port) {
-            width: 100%;
-        }
-
-        &:focus {
-            outline: none;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
-            border-bottom: .3rem solid $color-primary;
-
-            &:invalid {
-                border-bottom: .3rem solid $color-secondary-dark;
-            }
-        }
-
-        &::-webkit-input-placeholder {
-            color: $color-grey-dark-2;
-        }
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
     }
+  }
 
-    &__label {
-        font-size: 1.5rem;
-        font-weight: 700;
-        display: block;
+  &__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+  }
+
+  &__input:placeholder-shown+&__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
     }
+  }
 
-    &__input:placeholder-shown+&__label {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-4rem);
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 0.5rem solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
     }
+  }
 
-    &__radio-group {
-        width: 49%;
-        display: inline-block;
-
-        @include respond(tab-port) {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-    }
-
-    &__radio-input {
-        display: none;
-    }
-
-    &__radio-label {
-        font-size: $default-font-size;
-        cursor: pointer;
-        position: relative;
-        padding-left: 4.5rem;
-    }
-
-    &__radio-button {
-        height: 3rem;
-        width: 3rem;
-        border: .5rem solid $color-primary;
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        top: -.4rem;
-
-        &::after {
-            content: "";
-            display: block;
-            height: 1.3rem;
-            width: 1.3rem;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: $color-primary;
-            opacity: 0;
-            transition: opacity .2s;
-        }
-    }
-
-    &__radio-input:checked~&__radio-label &__radio-button::after {
-        opacity: 1;
-    }
+  &__radio-input:checked~&__radio-label &__radio-button::after {
+    opacity: 1;
+  }
 }
