@@ -921,6 +921,9 @@ sas .btn-text:hover {
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .navigation--scroll {
     background: #000000; }
+  .navigation--active {
+    color: #f5f5f5 !important;
+    font-weight: bold !important; }
   .navigation__bar {
     float: right;
     font-size: 2rem;
