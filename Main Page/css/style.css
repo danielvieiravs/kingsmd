@@ -792,13 +792,10 @@ sas .btn-text:hover {
 
 .footer {
   background-color: #000000;
-  padding: 0;
+  padding: 8rem 0;
   font-size: 1.4rem; }
-  @media only screen and (max-width: 56.25em) {
-    .footer {
-      padding: 8rem 0; } }
   .footer__container {
-    padding: 5rem 0; }
+    padding: 0; }
   .footer__row__opt__a {
     color: #ffffffcc;
     cursor: pointer;
@@ -1077,31 +1074,33 @@ sas .btn-text:hover {
   outline: none; }
 
 .section__tours {
-  background-color: #f5f5f5;
-  height: 100vh; }
+  padding: 0;
+  background-color: #f5f5f5; }
+  .section__tours__title {
+    padding: 2rem 4rem; }
+    .section__tours__title__text {
+      padding: 0 !important; }
   .section__tours__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
 
 .section__about {
   background-color: #f5f5f5;
-  padding: 0 4rem;
+  padding: 0rem 4rem;
   display: flex;
-  height: 100vh;
   align-items: center; }
   .section__about__text {
-    padding-right: 6rem; }
+    padding: 5rem 6rem 5rem 0; }
 
 .section__book {
   padding: 0;
-  background-image: linear-gradient(to right bottom, #3f3f3f, #000000);
-  height: 100vh; }
+  background-image: linear-gradient(to right bottom, #3f3f3f, #000000); }
   .section__book .row {
     max-width: inherit !important;
     padding: 0 !important; }
 
 .section__stories {
-  height: 100vh;
+  padding: 10rem 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1110,7 +1109,6 @@ sas .btn-text:hover {
 .section__feature {
   padding: 10rem 0;
   background-size: cover;
-  height: 100vh;
   display: flex;
   align-items: center; }
 

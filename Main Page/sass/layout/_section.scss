@@ -11,8 +11,16 @@
   }
 
   &__tours {
+    padding: 0;
     background-color: $color-grey-light-1;
-    height: 100vh;
+
+    &__title {
+      padding: 2rem 4rem;
+
+      &__text {
+        padding: 0 !important;
+      }
+    }
 
     &__gallery {
       display: grid;
@@ -22,20 +30,18 @@
 
   &__about {
     background-color: $color-grey-light-1;
-    padding: 0 4rem;
+    padding: 0rem 4rem;
     display: flex;
-    height: 100vh;
     align-items: center;
 
     &__text {
-      padding-right: 6rem;
+      padding: 5rem 6rem 5rem 0;
     }
   }
 
   &__book {
     padding: 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-    height: 100vh;
 
     .row {
       max-width: inherit !important;
@@ -44,7 +50,7 @@
   }
 
   &__stories {
-    height: 100vh;
+    padding: 10rem 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -55,7 +61,6 @@
   &__feature {
     padding: 10rem 0;
     background-size: cover;
-    height: 100vh;
     display: flex;
     align-items: center;
   }
