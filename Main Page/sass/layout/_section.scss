@@ -40,7 +40,10 @@
 
   &__book {
     padding: 0;
-    background: #ffffffde;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    background-image: linear-gradient(90deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 100%, transparent 100%), url("../img/nat-10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &__wrapper {
       &__content {
