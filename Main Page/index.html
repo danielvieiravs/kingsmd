@@ -181,14 +181,82 @@
 
     <section id="section-book" class="section__book">
       <div class="row">
-        <div class="book">
-          <div class="book__form">
-            <div class="u-margin-bottom-medium">
+        <div class="section__book__wrapper">
+          <div class="section__book__wrapper__content">
+            <div>
               <h2 class="heading-secondary">
                 Start booking now
               </h2>
             </div>
-            <form id="form-contact" class="form">
+
+            <div class="section__book__form__tabs">
+              <a id="form-contact-tab-1" class="section__book__form__tabs__text">Details</a>
+              <a id="form-contact-tab-2" class="section__book__form__tabs__text section__book__form__tabs--disabled">Appointment</a>
+              <a id="form-contact-tab-3" class="section__book__form__tabs__text section__book__form__tabs--disabled">Vehicle</a>
+            </div>
+
+            <!-- form 1 -->
+            <form id="form-contact-1" class="form">
+              <div class="form__row col-md-12">
+                <label class="form__label">Contact Details</label>
+              </div>
+              <div class="form__row">
+                <div class="form__row__item col-md-6">
+                  <input type="text" id="form-name" class="form__input" placeholder="Your Name" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <input type="email" id="form-email" class="form__input" placeholder="Your Email" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row__item col-md-12">
+                  <input type="text" id="form-phone" class="form__input" placeholder="Your Phone" required>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row__item col-md-12 text-center">
+                  <button id="form-submit-1" type="submit" class="btn form__button">Continue</button>
+                </div>
+              </div>
+            </form>
+
+            <!-- form 2 -->
+            <form id="form-contact-2" class="form section__book--hidden">
+              <div class="form__row">
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Appointment Date</label>
+                  <input type="text" class="form__input" id="form-date" data-toggle="datepicker" placeholder="Appointment Date" autocomplete="off" required>
+                </div>
+                <div class="form__row__item col-md-6">
+                  <label class="form__label">Appointment Time</label>
+                  <div>
+                    <select id="form-time" class="form__select" required>
+                      <option value="">-- Choose --</option>
+                      <option value="2010">09:00AM - 10:00AM</option>
+                      <option value="2011">10:00AM - 11:00AM</option>
+                      <option value="2012">11:00AM - 12:00PM</option>
+                      <option value="2013">12:00PM - 01:00PM</option>
+                      <option value="2014">01:00PM - 02:00PM</option>
+                      <option value="2015">02:00PM - 03:00PM</option>
+                      <option value="2015">03:00PM - 04:00PM</option>
+                      <option value="2015">04:00PM - 05:00PM</option>
+                      <option value="2015">05:00PM - 06:00PM</option>
+                      <option value="2015">06:00PM - 07:00PM</option>
+                      <option value="2015">07:00PM - 08:00PM</option>
+                      <option value="2015">08:00PM - 09:00PM</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row__item col-md-12 text-center">
+                  <button id="form-submit-2" type="submit" class="btn form__button">Continue</button>
+                </div>
+              </div>
+            </form>
+
+            <!-- form 3 -->
+            <form id="form-contact-3" class="form section__book--hidden">
               <div class="form__row">
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Vehicle Information</label>
@@ -222,58 +290,17 @@
                 </div>
               </div>
               <div class="form__row">
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Appointment Date</label>
-                  <input type="text" class="form__input" id="form-date" data-toggle="datepicker" placeholder="Appointment Date" autocomplete="off" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Appointment Time</label>
-                  <div>
-                    <select id="form-time" class="form__select" required>
-                      <option value="">-- Choose --</option>
-                      <option value="2010">09:00AM - 10:00AM</option>
-                      <option value="2011">10:00AM - 11:00AM</option>
-                      <option value="2012">11:00AM - 12:00PM</option>
-                      <option value="2013">12:00PM - 01:00PM</option>
-                      <option value="2014">01:00PM - 02:00PM</option>
-                      <option value="2015">02:00PM - 03:00PM</option>
-                      <option value="2015">03:00PM - 04:00PM</option>
-                      <option value="2015">04:00PM - 05:00PM</option>
-                      <option value="2015">05:00PM - 06:00PM</option>
-                      <option value="2015">06:00PM - 07:00PM</option>
-                      <option value="2015">07:00PM - 08:00PM</option>
-                      <option value="2015">08:00PM - 09:00PM</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="form__row col-md-12">
-                <label class="form__label">Contact Details</label>
-              </div>
-              <div class="form__row">
-                <div class="form__row__item col-md-6">
-                  <input type="text" id="form-name" class="form__input" placeholder="Your Name" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <input type="email" id="form-email" class="form__input" placeholder="Your Email" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
-                </div>
-              </div>
-              <div class="form__row">
-                <div class="form__row__item col-md-12">
-                  <input type="text" id="form-phone" class="form__input" placeholder="Your Phone" required>
-                </div>
-              </div>
-              <div class="form__row">
                 <div class="form__row__item col-md-12">
                   <textarea id="form-message" class="form__area" placeholder="Your Message" required></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
-                  <button id="form-submit" type="submit" class="btn form__button">Submit Now</button>
+                  <button id="form-submit-3" type="submit" class="btn form__button">Submit Now</button>
                 </div>
               </div>
             </form>
+
           </div>
         </div>
       </div>
@@ -353,6 +380,10 @@
 
   $('#section-feature').parallax({
     imageSrc: 'img/nat-4.png'
+  });
+
+  $('#section-book').parallax({
+    imageSrc: 'img/nat-10.jpg'
   });
 
   function navigation() {
@@ -491,18 +522,57 @@
     }).on('change', function() {
       $('#form-date').datepicker('hide');
     });
+    showTab(1);
 
-    $('#form-submit').off().on('click', function(e) {
+    $('#form-contact-tab-1').off().on('click', function() {
+      showTab(1);
+    });
+
+    $('#form-contact-tab-2').off().on('click', function() {
+      showTab(2);
+    });
+
+    $('#form-contact-tab-3').off().on('click', function() {
+      showTab(3);
+    });
+
+    $('#form-submit-1').off().on('click', function(e) {
       var na = $('#form-name').val();
       var em = $('#form-email').val();
       var ph = $('#form-phone').val();
-      var ca = $('#form-car').val();
-      var se = $('#form-service').val();
+
+      if (na != '' && em != '' && ph != '') {
+        showTab(2);
+        $('#form-contact-tab-2').removeClass('section__book__form__tabs--disabled');
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+
+    $('#form-submit-2').off().on('click', function(e) {
       var da = $('#form-date').val();
       var ti = $('#form-time').val();
+
+      if (da != '' && ti != '') {
+        showTab(3);
+        $('#form-contact-tab-3').removeClass('section__book__form__tabs--disabled');
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+
+    $('#form-submit-3').off().on('click', function(e) {
+      var na = $('#form-name').val();
+      var em = $('#form-email').val();
+      var ph = $('#form-phone').val();
+      var da = $('#form-date').val();
+      var ti = $('#form-time').val();
+
+      var ca = $('#form-car').val();
+      var se = $('#form-service').val();
       var me = $('#form-message').val();
 
-      if (na != '' && em != '' && ph != '' && ca != '' && se != '' && da != '' && ti != '' && me != '') {
+      if (ca != '' && se != '' && me != '') {
         $.ajax({
           type: "POST",
           url: "mail.php",
@@ -518,13 +588,29 @@
             'message': me
           },
           success: function(res) {
-            $('#form-contact').trigger('reset');
+            resetForms();
           }
         });
         e.stopPropagation();
         e.preventDefault();
       }
     });
+
+    function showTab(active) {
+      $('.section__book').find('.form').addClass('section__book--hidden');
+      $('#form-contact-' + active).removeClass('section__book--hidden');
+      $('.section__book__form__tabs__text').removeClass('section__book__form__tabs__text--active');
+      $('#form-contact-tab-' + active).addClass('section__book__form__tabs__text--active');
+    }
+
+    function resetForms() {
+      $('#form-contact-1').trigger('reset');
+      $('#form-contact-2').trigger('reset');
+      $('#form-contact-3').trigger('reset');
+      showTab(1);
+      $('#form-contact-tab-2').addClass('section__book__form__tabs--disabled');
+      $('#form-contact-tab-3').addClass('section__book__form__tabs--disabled');
+    }
   }
 </script>
 

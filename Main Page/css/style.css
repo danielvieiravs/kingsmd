@@ -1070,7 +1070,7 @@ sas .btn-text:hover {
     top: 0;
     transform: rotate(-135deg); }
 
-.section__about:focus, .section__feature:focus, .section__tours:focus, .section__stories:focus, .section__book:focus {
+.section__about:focus, .section__book:focus, .section__feature:focus, .section__stories:focus, .section__tours:focus {
   outline: none; }
 
 .section__tours {
@@ -1086,7 +1086,7 @@ sas .btn-text:hover {
 
 .section__about {
   background-color: #f5f5f5;
-  padding: 0rem 4rem;
+  padding: 0 4rem;
   display: flex;
   align-items: center; }
   .section__about__text {
@@ -1094,7 +1094,29 @@ sas .btn-text:hover {
 
 .section__book {
   padding: 0;
-  background-image: linear-gradient(to right bottom, #3f3f3f, #000000); }
+  background: #ffffffde; }
+  .section__book__wrapper__content {
+    padding: 6rem; }
+  .section__book--hidden {
+    display: none; }
+  .section__book__form__tabs {
+    display: flex;
+    padding: 0 0 4rem; }
+    .section__book__form__tabs--disabled {
+      pointer-events: none;
+      opacity: 0.5; }
+    .section__book__form__tabs__text {
+      text-decoration: none !important;
+      color: #3f3f3f !important;
+      padding: 2rem;
+      font-size: 1.6rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent; }
+      .section__book__form__tabs__text--active {
+        color: #000000 !important;
+        border-bottom: 2px solid #000000; }
+      .section__book__form__tabs__text:hover {
+        color: #000000 !important; }
   .section__book .row {
     max-width: inherit !important;
     padding: 0 !important; }
@@ -1149,26 +1171,3 @@ sas .btn-text:hover {
         font-size: 3rem; }
       .section__geral__container__text--2 {
         font-size: 2rem; }
-
-.book {
-  background-image: linear-gradient(90deg, rgba(245, 245, 245, 0.9) 0%, rgba(245, 245, 245, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
-  background-size: 100%;
-  background-repeat: round;
-  border-radius: 0.3rem;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
-  @media only screen and (max-width: 75em) {
-    .book {
-      background-image: linear-gradient(90deg, rgba(245, 245, 245, 0.9) 0%, rgba(245, 245, 245, 0.9) 100%, transparent 65%), url("../img/nat-10.jpg");
-      background-size: cover; } }
-  @media only screen and (max-width: 56.25em) {
-    .book {
-      background-image: linear-gradient(to right, rgba(245, 245, 245, 0.9) 0%, rgba(245, 245, 245, 0.9) 100%), url("../img/nat-10.jpg"); } }
-  .book__form {
-    width: 50%;
-    padding: 6rem; }
-    @media only screen and (max-width: 75em) {
-      .book__form {
-        width: 70%; } }
-    @media only screen and (max-width: 75em) {
-      .book__form {
-        width: 100%; } }

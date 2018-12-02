@@ -1,10 +1,9 @@
 .section {
-
   &__about,
+  &__book,
   &__feature,
-  &__tours,
   &__stories,
-  &__book {
+  &__tours {
     &:focus {
       outline: none;
     }
@@ -30,7 +29,7 @@
 
   &__about {
     background-color: $color-grey-light-1;
-    padding: 0rem 4rem;
+    padding: 0 4rem;
     display: flex;
     align-items: center;
 
@@ -41,7 +40,47 @@
 
   &__book {
     padding: 0;
-    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    background: #ffffffde;
+
+    &__wrapper {
+      &__content {
+        padding: 6rem;
+      }
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    &__form {
+      &__tabs {
+        display: flex;
+        padding: 0 0 4rem;
+
+        &--disabled {
+          pointer-events: none;
+          opacity: 0.5;
+        }
+
+        &__text {
+          text-decoration: none !important;
+          color: $color-primary !important;
+          padding: 2rem;
+          font-size: $default-font-size;
+          cursor: pointer;
+          border-bottom: 2px solid transparent;
+
+          &--active {
+            color: $color-primary-dark !important;
+            border-bottom: 2px solid $color-primary-dark;
+          }
+
+          &:hover {
+            color: $color-primary-dark !important;
+          }
+        }
+      }
+    }
 
     .row {
       max-width: inherit !important;
@@ -55,7 +94,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
   }
 
   &__feature {
