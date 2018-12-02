@@ -1,4 +1,65 @@
 .section {
+
+  &__about,
+  &__feature,
+  &__tours,
+  &__stories,
+  &__book {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__tours {
+    background-color: $color-grey-light-1;
+    height: 100vh;
+
+    &__gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__about {
+    background-color: $color-grey-light-1;
+    padding: 0 4rem;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+    &__text {
+      padding-right: 6rem;
+    }
+  }
+
+  &__book {
+    padding: 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    height: 100vh;
+
+    .row {
+      max-width: inherit !important;
+      padding: 0 !important;
+    }
+  }
+
+  &__stories {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  &__feature {
+    padding: 10rem 0;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
   &__geral {
     padding: 0 !important;
     margin-top: 0 !important;
@@ -38,7 +99,7 @@
       }
 
       &__text {
-        color: $color-grey-section-about;
+        color: $color-secondary-light;
         font-size: $default-font-size;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -46,6 +107,16 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        margin: 0;
+
+        &--1 {
+          padding-bottom: 2rem;
+          font-size: 3rem;
+        }
+
+        &--2 {
+          font-size: 2rem;
+        }
       }
     }
   }

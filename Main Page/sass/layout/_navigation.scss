@@ -13,22 +13,26 @@
     }
 
     &__bar {
-      float: right;
-      font-size: 2rem;
-      padding: 0 2rem;
-      height: 100%;
-      display: flex;
-      align-items: center;
+        float: right;
+        font-size: 2rem;
+        padding-right: 10rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
 
-      &__tab {
-        text-decoration: none !important;
-        color: $color-white !important;
-        padding: 0 1rem;
+        &__tab {
+            text-decoration: none !important;
+            color: $color-grey-light-4 !important;
+            padding: 0 1.2rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4rem;
 
-        &:hover {
-          font-weight: bold;
+            &:hover {
+                color: $color-white !important;
+                font-weight: bold;
+            }
         }
-      }
     }
 
     &__backtop {

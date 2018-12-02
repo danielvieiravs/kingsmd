@@ -23,23 +23,24 @@
   <div id="navigation-id" class="navigation">
     <div id="navigation-back-top" class="navigation__backtop"><i class="fa fa-chevron-up navigation__backtop__icon"></i></div>
     <div class="navigation__logo-box">
-      <img src="img/logo-white.png" alt="Logo" class="navigation__logo">
+      <!--<img src="img/logo-white.png" alt="Logo" class="navigation__logo">-->
     </div>
     <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="navigation__button hidden-lg hidden-md">
       <span class="navigation__icon">&nbsp;</span>
     </label>
     <div class="navigation__bar hidden-sm hidden-xs">
-      <a href="#section-about" class="navigation__bar__tab">About us</a>
-      <a href="#section-feature" class="navigation__bar__tab">Features</a>
-      <a href="#section-tours" class="navigation__bar__tab">Services</a>
+      <a href="#ripple-effect-id" class="navigation__bar__tab">Home</a>
+      <a href="#section-about" class="navigation__bar__tab">About</a>
+      <a href="#section-feature" class="navigation__bar__tab">Services</a>
+      <a href="#section-tours" class="navigation__bar__tab">Gallery</a>
       <a href="#section-stories" class="navigation__bar__tab">Testimonials</a>
       <a href="#section-book" class="navigation__bar__tab">Contact</a>
     </div>
     <div class="navigation__background"></div>
     <nav class="navigation__nav">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="#section-about" class="navigation__link">About us</a></li>
+        <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
         <li class="navigation__item"><a href="#section-feature" class="navigation__link">Features</a></li>
         <li class="navigation__item"><a href="#section-tours" class="navigation__link">Services</a></li>
         <li class="navigation__item"><a href="#section-stories" class="navigation__link">Testimonials</a></li>
@@ -55,41 +56,38 @@
         <span class="heading-primary--sub header__bold">Movements & Detailing</span>
       </h1>
     </div>
-    <a href="#section-about" class="header__button">
-      <p class="header__button__text">Learn More</p>
+    <a href="#section-book" class="header__button">
+      <p class="header__button__text">Book Now</p>
       <i class="header__button__icon fa fa-angle-double-down"></i>
     </a>
   </header>
 
   <main>
 
-    <section id="section-about" class="section-about section__geral">
-      <div class="section__geral__wrapper">
-        <div class="container section__geral__container">
-          <div class="row section__geral__container__row">
-            <div class="col-md-3 section__geral__container__col">
-              <h2 class="heading-secondary hidden-lg hidden-md section__geral__container__title__top">
-                About us
-              </h2>
-              <h2 class="heading-secondary hidden-sm hidden-xs section__geral__container__title__side">
-                About us
-              </h2>
-            </div>
-            <div class="col-md-4 col-md-offset-1 section__geral__container__col">
-              <p class="section__geral__container__text">Here at J Kings Movements & Detailing, not only do we dedicate our interest in bringing your vehicle back to cosmetic pristine condition, we also sustain a strong level of customer service, demonstrating our understanding towards your best
-                interest and requirements.
-              </p>
-              <p class="section__geral__container__text">It is our mission to bring out the near new in every old; maintain the new to keep it looking as good as gold while focusing on an ultimate experience for our customers.
-              </p>
-            </div>
-          </div>
+    <section id="section-about" class="section-about">
+      <div class="section__about">
+        <div class="section__about__text">
+          <h2 class="heading-secondary heading-secondary--color-1 section__geral__container__title__top">
+            Who we are
+          </h2>
+          <p class="section__geral__container__text section__geral__container__text--1">Here at J Kings Movements &
+            Detailing, we believe it’s all
+            about knowing what you want and providing the service that your vehicle needs.
+          </p>
+          <p class=" section__geral__container__text section__geral__container__text--2">With over 20 years of
+            experience, our team of specialised and
+            dedicated technicians have provided bespoke Mobile Automotive Detailing & Vehicle Movements services to a
+            host of dealerships across the UK including Aston Martin, Ferrari, Jaguar, Audi, BMW and a host of other
+            dealerships across the UK.
+          </p>
         </div>
-        <div class="col-sm-3 section__geral__container__col section__geral__image section__geral__image--about hidden-sm hidden-xs">
+        <div class="">
+          <img src="img/about.jpg" alt="Tour photo" class="popup__img">
         </div>
       </div>
     </section>
 
-    <section id="section-feature" class="section-feature">
+    <section id="section-feature" class="section__feature">
       <div class="row">
         <div class="col-1-of-3">
           <div class="feature-box">
@@ -130,15 +128,35 @@
       </div>
     </section>
 
-    <section id="section-tours" class="section-tours">
-      <div class="u-center-text u-margin-bottom-big">
+    <section id="section-tours" class="section__tours">
+      <div>
         <h2 class="heading-secondary">
           Gallery
         </h2>
       </div>
+      <div class="section__tours__gallery">
+        <div class="">
+          <img src="img/g_one.jpg" alt="Tour photo" class="popup__img">
+        </div>
+        <div class="">
+          <img src="img/g_two.jpg" alt="Tour photo" class="popup__img">
+        </div>
+        <div class="">
+          <img src="img/g_third.jpg" alt="Tour photo" class="popup__img">
+        </div>
+        <div class="">
+          <img src="img/g_four.jpg" alt="Tour photo" class="popup__img">
+        </div>
+        <div class="">
+          <img src="img/g_fifth.jpg" alt="Tour photo" class="popup__img">
+        </div>
+        <div class="">
+          <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
+        </div>
+      </div>
     </section>
 
-    <section id="section-stories" class="section-stories">
+    <section id="section-stories" class="section__stories">
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
           <source src="img/video.mp4" type="video/mp4">
@@ -165,7 +183,7 @@
     </section>
 
 
-    <section id="section-book" class="section-book">
+    <section id="section-book" class="section__book">
       <div class="row">
         <div class="book">
           <div class="book__form">
@@ -210,7 +228,8 @@
               <div class="form__row">
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Appointment Date</label>
-                  <input type="text" class="form__input" id="form-date" data-toggle="datepicker" placeholder="Appointment Date" autocomplete="off" required>
+                  <input type="text" class="form__input" id="form-date" data-toggle="datepicker" placeholder="Appointment Date"
+                    autocomplete="off" required>
                 </div>
                 <div class="form__row__item col-md-6">
                   <label class="form__label">Appointment Time</label>
@@ -283,8 +302,10 @@
           </div>
           <div class="col-sm-2 footer__col">
             <ul class="list-unstyled">
-              <li class="footer__row__opt"><a href="https://www.facebook.com/JKing-Movements-Detailing-803552906699190/" target="_blank" class="footer__row__opt__a">Facebook</a></li>
-              <li class="footer__row__opt"><a href="https://www.instagram.com/jking_movements_and_detailing/?fbclid=IwAR2sadkWpDhWwMcJWRJhQ857otmJwtLxu7BEsFhODb5IYsJ8pt_SRoOds7s" target="_blank" class="footer__row__opt__a">Instagram</a></li>
+              <li class="footer__row__opt"><a href="https://www.facebook.com/JKing-Movements-Detailing-803552906699190/"
+                  target="_blank" class="footer__row__opt__a">Facebook</a></li>
+              <li class="footer__row__opt"><a href="https://www.instagram.com/jking_movements_and_detailing/?fbclid=IwAR2sadkWpDhWwMcJWRJhQ857otmJwtLxu7BEsFhODb5IYsJ8pt_SRoOds7s"
+                  target="_blank" class="footer__row__opt__a">Instagram</a></li>
             </ul>
           </div>
           <div class="col-sm-2 footer__col">
@@ -296,7 +317,8 @@
           </div>
           <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 footer__col footer__row__desc">
             <h3 class="footer__row__desc__title">Kings Movement & Detailing</h3>
-            <p class="footer__row__desc__info">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
+            <p class="footer__row__desc__info">We are a creative studio focusing on culture, luxury, editorial &amp;
+              art. Somewhere between sophistication and simplicity.</p>
           </div>
         </div>
       </div>
@@ -315,7 +337,9 @@
         <h2 class="heading-secondary u-margin-small">Start booking now</h2>
         <h3 class="heading-tertiary u-margin-small">Important&ndash; Please read these terms before booking</h3>
         <p class="popup__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores debitis obcaecati distinctio, repellendus corrupti repellat, asperiores vel et maxime quas quod voluptatibus quasi, eligendi blanditiis? Quisquam inventore modi quidem.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores debitis obcaecati distinctio,
+          repellendus corrupti repellat, asperiores vel et maxime quas quod voluptatibus quasi, eligendi blanditiis?
+          Quisquam inventore modi quidem.
         </p>
         <a href="#section-book" class="popup-close-id btn btn--green">Book now</a>
       </div>
@@ -347,7 +371,7 @@
       // Remove links that don't actually link to anything
       .not('[href="#"]')
       .not('[href="#0"]')
-      .click(function(event) {
+      .click(function (event) {
         if ($('.navigation__checkbox').prop('checked')) {
           $('.navigation__checkbox').prop('checked', false)
         } else {
@@ -370,7 +394,7 @@
             event.preventDefault();
             $('html, body').animate({
               scrollTop: target.offset().top
-            }, 1000, function() {
+            }, 1000, function () {
               // Callback after animation
               // Must change focus!
               var $target = $(target);
@@ -425,10 +449,10 @@
   }
 
   function initScroll() {
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       refreshScroll();
     });
-    $('#navigation-back-top').off().on('click', function() {
+    $('#navigation-back-top').off().on('click', function () {
       $('html, body').animate({
         scrollTop: 0
       }, 600);
@@ -456,11 +480,11 @@
   function contactForm() {
     $('#form-date').datepicker({
       format: "dd/mm/yyyy"
-    }).on('change', function() {
+    }).on('change', function () {
       $('#form-date').datepicker('hide');
     });
 
-    $('#form-submit').off().on('click', function(e) {
+    $('#form-submit').off().on('click', function (e) {
       var na = $('#form-name').val();
       var em = $('#form-email').val();
       var ph = $('#form-phone').val();
@@ -485,7 +509,7 @@
             'time': ti,
             'message': me
           },
-          success: function(res) {
+          success: function (res) {
             $('#form-contact').trigger('reset');
           }
         });

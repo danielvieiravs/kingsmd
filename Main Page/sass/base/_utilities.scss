@@ -36,3 +36,13 @@
     }
 
 }
+
+.u-padding {
+    &-1 {
+        padding: 0 4rem;
+    }
+}
+
+.u-flex {
+    display: flex;
+}
