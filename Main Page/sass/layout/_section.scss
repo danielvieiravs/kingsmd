@@ -1,5 +1,4 @@
 .section {
-
   &__about,
   &__book,
   &__feature,
@@ -33,6 +32,7 @@
     padding: 0 4rem;
     display: flex;
     align-items: center;
+    min-height: 100vh;
 
     &__text {
       padding: 5rem 6rem 5rem 0;
@@ -43,6 +43,7 @@
     padding: 0;
     background-color: #fff;
     background-repeat: inherit;
+    min-height: 100vh;
 
     &__wrapper {
       &__content {
@@ -96,6 +97,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
   }
 
   &__feature {
@@ -103,6 +105,7 @@
     background-size: cover;
     display: flex;
     align-items: center;
+    min-height: 100vh;
   }
 
   &__geral {
