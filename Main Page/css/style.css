@@ -72,6 +72,10 @@ body {
 ::selection {
   background-color: transparent; }
 
+@font-face {
+  font-family: 'UniversityRomanRegular';
+  src: url("fonts/UniversityRomanRegular.ttf") format("truetype"); }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -109,7 +113,7 @@ body {
     animation: moveInRight 1s ease-out; }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
-        letter-spacing: .5rem; } }
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 1.5rem;
@@ -118,8 +122,8 @@ body {
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
   margin: 0;
   padding-bottom: 2rem;
   color: #000000; }
@@ -745,7 +749,8 @@ sas .btn-text:hover {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
+    text-align: center;
+    font-family: UniversityRomanRegular; }
   .header__bold {
     font-weight: bold; }
   .header__button {
