@@ -768,6 +768,7 @@ sas .btn-text:hover {
       display: block; }
     .header__button__text {
       margin: 0 !important;
+      letter-spacing: 0.4rem;
       font-size: 2rem; }
 
 .footer {
