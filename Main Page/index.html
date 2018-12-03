@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/simplelightbox.min.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/icon-font.css">
 
@@ -71,14 +72,9 @@
           <h2 class="heading-secondary heading-secondary--color-1 section__geral__container__title__top">
             Who we are
           </h2>
-          <p class="section__geral__container__text section__geral__container__text--1">Here at J Kings Movements &
-            Detailing, we believe it’s all about knowing what you want and providing the service that your vehicle
-            needs.
+          <p class="section__geral__container__text section__geral__container__text--1">Here at J Kings Movements & Detailing, we believe it’s all about knowing what you want and providing the service that your vehicle needs.
           </p>
-          <p class=" section__geral__container__text section__geral__container__text--2">With over 20 years of
-            experience, our team of specialised and dedicated technicians have provided bespoke Mobile Automotive
-            Detailing & Vehicle Movements services to a host of dealerships across the UK including Aston Martin,
-            Ferrari, Jaguar,
+          <p class=" section__geral__container__text section__geral__container__text--2">With over 20 years of experience, our team of specialised and dedicated technicians have provided bespoke Mobile Automotive Detailing & Vehicle Movements services to a host of dealerships across the UK including Aston Martin, Ferrari, Jaguar,
             Audi, BMW and a host of other dealerships across the UK.
           </p>
         </div>
@@ -135,25 +131,25 @@
           Gallery
         </h2>
       </div>
-      <div class="section__tours__gallery">
-        <div class="">
+      <div class="section__tours__gallery gallery">
+        <a href="img/g_one.jpg" class="big">
           <img src="img/g_one.jpg" alt="Tour photo" class="popup__img">
-        </div>
-        <div class="">
+        </a>
+        <a href="img/g_two.jpg" class="big">
           <img src="img/g_two.jpg" alt="Tour photo" class="popup__img">
-        </div>
-        <div class="">
+        </a>
+        <a href="img/g_third.jpg" class="big">
           <img src="img/g_third.jpg" alt="Tour photo" class="popup__img">
-        </div>
-        <div class="">
+        </a>
+        <a href="img/g_four.jpg" class="big">
           <img src="img/g_four.jpg" alt="Tour photo" class="popup__img">
-        </div>
-        <div class="">
+        </a>
+        <a href="img/g_fifth.jpg" class="big">
           <img src="img/g_fifth.jpg" alt="Tour photo" class="popup__img">
-        </div>
-        <div class="">
+        </a>
+        <a href="img/g_sixth.jpg" class="big">
           <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
-        </div>
+        </a>
       </div>
     </section>
 
@@ -520,10 +516,8 @@
           </div>
           <div class="col-sm-2 footer__col">
             <ul class="list-unstyled">
-              <li class="footer__row__opt"><a href="https://www.facebook.com/JKing-Movements-Detailing-803552906699190/"
-                  target="_blank" class="footer__row__opt__a">Facebook</a></li>
-              <li class="footer__row__opt"><a href="https://www.instagram.com/jking_movements_and_detailing/?fbclid=IwAR2sadkWpDhWwMcJWRJhQ857otmJwtLxu7BEsFhODb5IYsJ8pt_SRoOds7s"
-                  target="_blank" class="footer__row__opt__a">Instagram</a></li>
+              <li class="footer__row__opt"><a href="https://www.facebook.com/JKing-Movements-Detailing-803552906699190/" target="_blank" class="footer__row__opt__a">Facebook</a></li>
+              <li class="footer__row__opt"><a href="https://www.instagram.com/jking_movements_and_detailing/?fbclid=IwAR2sadkWpDhWwMcJWRJhQ857otmJwtLxu7BEsFhODb5IYsJ8pt_SRoOds7s" target="_blank" class="footer__row__opt__a">Instagram</a></li>
             </ul>
           </div>
           <div class="col-sm-2 footer__col">
@@ -535,8 +529,7 @@
           </div>
           <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 footer__col footer__row__desc">
             <h3 class="footer__row__desc__title">Kings Movement & Detailing</h3>
-            <p class="footer__row__desc__info">We believe it’s all about knowing what you want and providing the
-              service that your vehicle needs.</p>
+            <p class="footer__row__desc__info">We believe it’s all about knowing what you want and providing the service that your vehicle needs.</p>
           </div>
         </div>
       </div>
@@ -555,9 +548,7 @@
         <h2 class="heading-secondary u-margin-small">Start booking now</h2>
         <h3 class="heading-tertiary u-margin-small">Important&ndash; Please read these terms before booking</h3>
         <p class="popup__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores debitis obcaecati distinctio,
-          repellendus corrupti repellat, asperiores vel et maxime quas quod voluptatibus quasi, eligendi blanditiis?
-          Quisquam inventore modi quidem.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores debitis obcaecati distinctio, repellendus corrupti repellat, asperiores vel et maxime quas quod voluptatibus quasi, eligendi blanditiis? Quisquam inventore modi quidem.
         </p>
         <a href="#section-book" class="popup-close-id btn btn--green">Book now</a>
       </div>
@@ -571,6 +562,7 @@
 <script src="js/parallax.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/datepicker.min.js"></script>
+<script src="js/simple-lightbox.min.js"></script>
 <script>
   drawTestimonials();
   navigation();
@@ -578,6 +570,7 @@
   effectImage();
   contactForm()
   refreshScroll();
+  var gallery = $('.gallery a').simpleLightbox();
 
   function navigation() {
     // Select all links with hashes
@@ -585,7 +578,7 @@
       // Remove links that don't actually link to anything
       .not('[href="#"]')
       .not('[href="#0"]')
-      .click(function (event) {
+      .click(function(event) {
         if ($('.navigation__checkbox').prop('checked')) {
           $('.navigation__checkbox').prop('checked', false)
         } else {
@@ -608,7 +601,7 @@
             event.preventDefault();
             $('html, body').animate({
               scrollTop: target.offset().top
-            }, 1000, function () {
+            }, 1000, function() {
               // Callback after animation
               // Must change focus!
               var $target = $(target);
@@ -663,10 +656,10 @@
   }
 
   function initScroll() {
-    $(window).scroll(function () {
+    $(window).scroll(function() {
       refreshScroll();
     });
-    $('#navigation-back-top').off().on('click', function () {
+    $('#navigation-back-top').off().on('click', function() {
       $('html, body').animate({
         scrollTop: 0
       }, 600);
@@ -691,9 +684,9 @@
     autoActive();
 
     function autoActive() {
-      $('.navigation-tabs-id').each(function () {
+      $('.navigation-tabs-id').each(function() {
         var sc = $(this);
-        sc.find('a').each(function () {
+        sc.find('a').each(function() {
           var currLink = $(this);
           var refElement = $(currLink.attr('href'));
           if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() >
@@ -717,21 +710,21 @@
   }
 
   function contactForm() {
-    $('.form-date-id').each(function () {
+    $('.form-date-id').each(function() {
       $(this).datepicker({
         format: "dd/mm/yyyy"
-      }).on('change', function () {
+      }).on('change', function() {
         $(this).datepicker('hide');
       });
     });
 
     resetForms();
-    $('.form-contact-iteration').each(function () {
-      $(this).find('select').on('change', function () {
+    $('.form-contact-iteration').each(function() {
+      $(this).find('select').on('change', function() {
         var acOpt = $(this).find('option:selected').data('active');
         if (acOpt) {
           var valOpt = $(this).find('option:selected').val();
-          $('.form__row__item').each(function () {
+          $('.form__row__item').each(function() {
             if ($(this).data('changed') == acOpt && $(this).data('active') == valOpt) {
               $(this).removeClass('form__row__item--disabled');
             } else if ($(this).data('changed') == acOpt && $(this).data('active') !== valOpt) {
@@ -744,31 +737,31 @@
     });
     showTab(1);
 
-    $('#form-contact-tab-1').off().on('click', function () {
+    $('#form-contact-tab-1').off().on('click', function() {
       showTab(1);
     });
 
-    $('#form-contact-tab-2').off().on('click', function () {
+    $('#form-contact-tab-2').off().on('click', function() {
       showTab(2);
     });
 
-    $('#form-contact-tab-3').off().on('click', function () {
+    $('#form-contact-tab-3').off().on('click', function() {
       showTab(3);
     });
 
-    $('#form-contact-1').on('submit', function (e) {
+    $('#form-contact-1').on('submit', function(e) {
       resetForms();
       alert('1');
       e.preventDefault();
     });
 
-    $('#form-contact-2').on('submit', function (e) {
+    $('#form-contact-2').on('submit', function(e) {
       resetForms();
       alert('2');
       e.preventDefault();
     });
 
-    $('#form-contact-3').on('submit', function (e) {
+    $('#form-contact-3').on('submit', function(e) {
       resetForms();
       alert('3');
       e.preventDefault();
@@ -785,7 +778,7 @@
       $('#form-contact-1').trigger('reset');
       $('#form-contact-2').trigger('reset');
       $('#form-contact-3').trigger('reset');
-      $('.form__row__item').each(function () {
+      $('.form__row__item').each(function() {
         if ($(this).data('changed')) {
           $(this).addClass('form__row__item--disabled');
         }
@@ -807,7 +800,7 @@
           'time': ti,
           'message': me
         },
-        success: function (res) {
+        success: function(res) {
           resetForms();
         }
       });
