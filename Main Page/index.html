@@ -681,7 +681,10 @@
       $('#navigation-id').removeClass('navigation--scroll');
       $('#navigation-back-top').hide();
     }
-    autoActive();
+    clearTimeout(self.timeoutCheck);
+    self.timeoutCheck = setTimeout(function() {
+      autoActive();
+    }, 100);
 
     function autoActive() {
       $('.navigation-tabs-id').each(function() {
@@ -689,8 +692,9 @@
         sc.find('a').each(function() {
           var currLink = $(this);
           var refElement = $(currLink.attr('href'));
-          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() >
-            scrollPos) {
+          var elT = Math.floor(refElement.position().top);
+          var scT = scrollPos + $('#navigation-id').outerHeight();
+          if (elT <= scT && elT + refElement.height() > scT) {
             sc.find('a').removeClass('navigation--active');
             currLink.addClass('navigation--active');
           } else {
