@@ -26,10 +26,12 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
     @include respond(phone) {
       letter-spacing: 1rem;
       font-size: 5rem;
     }
+
     /*
         animation-iteration-count: 3;
         animation-delay: 3s;
@@ -42,6 +44,8 @@ body {
     font-weight: 700;
     letter-spacing: 1rem;
     animation: moveInRight 1s ease-out;
+    text-transform: lowercase;
+
     @include respond(phone) {
       letter-spacing: 0.5rem;
     }
@@ -64,9 +68,11 @@ body {
   &--color-1 {
     color: $color-grey-light-3;
   }
+
   @include respond(tab-port) {
     font-size: 3rem;
   }
+
   @include respond(phone) {
     font-size: 2.5rem;
   }

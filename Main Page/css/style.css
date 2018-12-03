@@ -110,7 +110,8 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1rem;
-    animation: moveInRight 1s ease-out; }
+    animation: moveInRight 1s ease-out;
+    text-transform: lowercase; }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: 0.5rem; } }
@@ -943,10 +944,10 @@ sas .btn-text:hover {
       color: #000000; }
   .navigation__logo-box {
     position: absolute;
-    top: 0;
-    left: 0; }
+    top: .5rem;
+    left: 3rem; }
   .navigation__logo {
-    height: 10rem; }
+    height: 7rem; }
   .navigation__checkbox {
     display: none; }
   .navigation__button {
@@ -1055,8 +1056,9 @@ sas .btn-text:hover {
   outline: none; }
 
 .section__tours {
-  padding: 0;
-  background-color: #f5f5f5; }
+  padding: 0rem 5rem 10rem 5rem;
+  background-color: #f5f5f5;
+  min-height: 100vh; }
   .section__tours__title {
     padding: 2rem 4rem; }
     .section__tours__title__text {

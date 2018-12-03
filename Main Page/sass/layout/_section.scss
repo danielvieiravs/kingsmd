@@ -1,4 +1,5 @@
 .section {
+
   &__about,
   &__book,
   &__feature,
@@ -10,8 +11,9 @@
   }
 
   &__tours {
-    padding: 0;
+    padding: 0rem 5rem 10rem 5rem;
     background-color: $color-grey-light-1;
+    min-height: 100vh;
 
     &__title {
       padding: 2rem 4rem;
