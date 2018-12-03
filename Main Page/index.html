@@ -43,8 +43,8 @@
       <ul class="navigation__list navigation-tabs-id">
         <li class="navigation__item"><a href="#ripple-effect-id" class="navigation__link">Home</a></li>
         <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
-        <li class="navigation__item"><a href="#section-feature" class="navigation__link">Features</a></li>
-        <li class="navigation__item"><a href="#section-tours" class="navigation__link">Services</a></li>
+        <li class="navigation__item"><a href="#section-feature" class="navigation__link">Services</a></li>
+        <li class="navigation__item"><a href="#section-tours" class="navigation__link">Gallery</a></li>
         <li class="navigation__item"><a href="#section-stories" class="navigation__link">Testimonials</a></li>
         <li class="navigation__item"><a href="#section-book" class="navigation__link">Contact</a></li>
       </ul>
@@ -131,7 +131,7 @@
           Gallery
         </h2>
       </div>
-      <div class="section__tours__gallery gallery">
+      <div id="gallery-photos" class="section__tours__gallery gallery">
         <a href="img/g_one.jpg" class="big">
           <img src="img/g_one.jpg" alt="Tour photo" class="popup__img">
         </a>
@@ -507,9 +507,10 @@
         <div class="footer__row">
           <div class="col-sm-2 footer__col">
             <ul class="list-unstyled">
-              <li class="footer__row__opt"><a href="#section-about" class="footer__row__opt__a">About us</a></li>
-              <li class="footer__row__opt"><a href="#section-feature" class="footer__row__opt__a">Features</a></li>
-              <li class="footer__row__opt"><a href="#section-tours" class="footer__row__opt__a">Services</a></li>
+              <li class="footer__row__opt"><a href="#ripple-effect-id" class="footer__row__opt__a">Home</a></li>
+              <li class="footer__row__opt"><a href="#section-about" class="footer__row__opt__a">About</a></li>
+              <li class="footer__row__opt"><a href="#section-feature" class="footer__row__opt__a">Services</a></li>
+              <li class="footer__row__opt"><a href="#section-tours" class="footer__row__opt__a">Gallery</a></li>
               <li class="footer__row__opt"><a href="#section-stories" class="footer__row__opt__a">Testimonials</a></li>
               <li class="footer__row__opt"><a href="#section-book" class="footer__row__opt__a">Contact</a></li>
             </ul>
@@ -569,8 +570,8 @@
   initScroll();
   effectImage();
   contactForm()
+  contactGallery()
   refreshScroll();
-  var gallery = $('.gallery a').simpleLightbox();
 
   function navigation() {
     // Select all links with hashes
@@ -707,6 +708,10 @@
       dropRadius: 20,
       perturbance: 0.01
     });
+  }
+
+  function contactGallery() {
+    var gallery = $('#gallery-photos a').simpleLightbox();
   }
 
   function contactForm() {
