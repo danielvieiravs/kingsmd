@@ -88,36 +88,36 @@
       <div class="row">
         <div class="col-1-of-3">
           <div class="feature-box">
-            <i class="feature-box__icon icon-basic-world"></i>
+            <img src="img/Movement.png" alt="Movements" class="feature-box__image">
             <h3 class="heading-terciary">Movements</h3>
             <p class="feature-box__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <a href="#popup" class="feature-box__button">
+            <a href="#popup" data-trigger="form-contact-tab-1" class="feature-box__button">
               <p class="feature-box__button__text">See More</p>
             </a>
           </div>
         </div>
         <div class="col-1-of-3">
           <div class="feature-box">
-            <i class="feature-box__icon icon-basic-compass"></i>
+            <img src="img/Detailing.png" alt="Detailing" class="feature-box__image">
             <h3 class="heading-terciary">Detailing</h3>
             <p class="feature-box__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <a href="#popup" class="feature-box__button">
+            <a href="#popup" data-trigger="form-contact-tab-2" class="feature-box__button">
               <p class="feature-box__button__text">See More</p>
             </a>
           </div>
         </div>
         <div class="col-1-of-3">
           <div class="feature-box">
-            <i class="feature-box__icon icon-basic-map"></i>
+            <img src="img/Events.png" alt="Events" class="feature-box__image">
             <h3 class="heading-terciary">Events</h3>
             <p class="feature-box__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <a href="#popup" class="feature-box__button">
+            <a href="#popup" data-trigger="form-contact-tab-3" class="feature-box__button">
               <p class="feature-box__button__text">See More</p>
             </a>
           </div>
@@ -126,11 +126,11 @@
     </section>
 
     <section id="section-tours" class="section__tours">
-      <div class="section__tours__title">
+      <!-- <div class="section__tours__title">
         <h2 class="heading-secondary section__tours__title__text">
           Gallery
         </h2>
-      </div>
+      </div> -->
       <div id="gallery-photos" class="section__tours__gallery gallery">
         <a href="img/g_one.jpg" class="big">
           <img src="img/g_one.jpg" alt="Tour photo" class="popup__img">
@@ -550,7 +550,9 @@
         <p class="popup__text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores debitis obcaecati distinctio, repellendus corrupti repellat, asperiores vel et maxime quas quod voluptatibus quasi, eligendi blanditiis? Quisquam inventore modi quidem.
         </p>
-        <a href="#section-book" class="popup-close-id btn btn--green">Book now</a>
+        <div class="form">
+          <a href="#section-book" class="popup-close-id btn form__button">Book now</a>
+        </div>
       </div>
     </div>
   </div>
@@ -583,6 +585,17 @@
           $('.navigation__checkbox').prop('checked', false)
         } else {
           if (this.hash.slice(1) == 'popup' || $(this).hasClass('popup-close-id')) {
+            if ($(this).hasClass('popup-close-id')) {
+              if ($(this).data('trigger')) {
+                $('#' + $(this).data('trigger')).trigger('click');
+              }
+            } else {
+              if ($(this).data('trigger')) {
+                $('.popup-close-id').data('trigger', $(this).data('trigger'));
+              } else {
+                $('.popup-close-id').data('trigger', false);
+              }
+            }
             return;
           }
         }
@@ -667,9 +680,6 @@
     $('#section-feature').parallax({
       imageSrc: 'img/nat-4.png'
     });
-    // $('#section-book').parallax({
-    //   imageSrc: 'img/nat-10.jpg'
-    // });
   }
 
   function refreshScroll() {

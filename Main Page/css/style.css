@@ -70,8 +70,7 @@ body {
       padding: 0rem; } }
 
 ::selection {
-  background-color: transparent;
-  color: #f5f5f5; }
+  background-color: transparent; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -297,13 +296,13 @@ sas .btn-text:hover {
   text-align: center;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform .3s; }
+  transition: transform 0.3s; }
   @media only screen and (max-width: 56.25em) {
     .feature-box {
       padding: 2rem; } }
   .feature-box__icon {
     font-size: 6rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     display: inline-block;
     background-image: linear-gradient(to right, #3f3f3f, #000000);
     -webkit-background-clip: text;
@@ -311,6 +310,8 @@ sas .btn-text:hover {
     @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         margin-bottom: 0; } }
+  .feature-box__image {
+    width: 10rem; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
   .feature-box__button {
@@ -507,7 +508,7 @@ sas .btn-text:hover {
   font-size: 1.5rem;
   font-family: inherit;
   color: inherit;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 0.3rem;
   background-color: #f5f5f5;
   border: 0.1rem solid #ddd;
@@ -521,44 +522,15 @@ sas .btn-text:hover {
   height: 4rem; }
 
 .form__button {
-  display: inline-block;
-  vertical-align: middle;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  overflow: hidden;
-  background: #f5f5f5;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  display: block;
+  background: #3f3f3f;
+  color: #fff;
   outline: none !important;
-  margin-top: 25px; }
+  margin: 2.5rem auto 0; }
   .form__button:hover {
-    color: #fff;
-    transform: translateY(0); }
-  .form__button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: #000000;
-    border-radius: 100%;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out; }
-  .form__button:active, .form__button:focus, .form__button:hover {
-    color: white; }
-  .form__button:active:before, .form__button:focus:before, .form__button:hover:before {
-    -webkit-transform: scale(2);
-    transform: scale(2); }
+    transform: translateY(0);
+    box-shadow: none; }
 
 .form__area {
   resize: vertical; }
@@ -567,7 +539,7 @@ sas .btn-text:hover {
   font-size: 1.5rem;
   font-family: inherit;
   color: inherit;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 0.3rem;
   background-color: #f5f5f5;
   border: 0.1rem solid #ddd;
