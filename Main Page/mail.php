@@ -1,11 +1,15 @@
 <?php
 
   $receptor = $_POST['receptor'];
+  $title = $_POST['title'];
   $email = $_POST['email'];
   $data = $_POST['data'];
   $subject = 'Kings Movement & Detailing - '.$email;
 
-  $content = '<html><body><table style="padding: 20px; border-collapse: collapse;">';
+  $content = '<html><body><table style="padding: 20px; border-collapse: collapse;">
+  <tr style="font-size: 20px;">
+    <td style="font-weight: bold; padding: 10px 25px 10px 0;">'.$title.'</td>
+  </tr>';
 
   foreach ($data as $key => $value) {
     $content .=

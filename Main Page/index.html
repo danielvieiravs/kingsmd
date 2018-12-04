@@ -806,17 +806,17 @@
     });
 
     $('#form-contact-1').on('submit', function(e) {
-      sendEmail($('#form-contact-1'));
+      sendEmail('Movements', $('#form-contact-1'));
       e.preventDefault();
     });
 
     $('#form-contact-2').on('submit', function(e) {
-      sendEmail($('#form-contact-2'));
+      sendEmail('Detailing', $('#form-contact-2'));
       e.preventDefault();
     });
 
     $('#form-contact-3').on('submit', function(e) {
-      sendEmail($('#form-contact-3'));
+      sendEmail('Events', $('#form-contact-3'));
       e.preventDefault();
     });
 
@@ -838,7 +838,7 @@
       });
     }
 
-    function sendEmail(parent) {
+    function sendEmail(title, parent) {
       var obj = {};
       var email = '';
       parent.find('.form__row__group__content').each(function() {
@@ -863,6 +863,7 @@
         url: "mail.php",
         data: {
           receptor: 'fabiovieira79@hotmail.com',
+          title: title,
           email: email,
           data: obj
         },
