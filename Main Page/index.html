@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
   <link rel="stylesheet" href="css/simplelightbox.min.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/icon-font.css">
@@ -266,7 +266,9 @@
                       <input type="text" placeholder="Return address" class="form__input" required>
                     </div>
                     <div class="form__row__item col-md-4">
-                      <input type="text" placeholder="Return date" class="form__input form-date-id" data-toggle="datepicker" required>
+                      <div class="input-append date form-datetime-id" data-mode="date">
+                        <input type="text" placeholder="Return date" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
+                      </div>
                     </div>
                     <div class="form__row__item col-md-4">
                       <div>
@@ -312,16 +314,14 @@
                   </div>
                   <div class="form__row__group__content col-md-12">
                     <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Date In" class="form__input form-date-id" data-toggle="datepicker" required>
+                      <div class="input-append date form-datetime-id">
+                        <input type="text" placeholder="In - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
+                      </div>
                     </div>
                     <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Time In" class="form__input" required>
-                    </div>
-                    <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Date Out" class="form__input form-date-id" data-toggle="datepicker" required>
-                    </div>
-                    <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Time Out" class="form__input" required>
+                      <div class="input-append date form-datetime-id">
+                        <input type="text" placeholder="Out - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -480,16 +480,14 @@
                       <input type="text" placeholder="Name" class="form__input" required>
                     </div>
                     <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Date To" class="form__input form-date-id" data-toggle="datepicker" required>
+                      <div class="input-append date form-datetime-id">
+                        <input type="text" placeholder="Start - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
+                      </div>
                     </div>
                     <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Date From" class="form__input form-date-id" data-toggle="datepicker" required>
-                    </div>
-                    <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Time Start" class="form__input" required>
-                    </div>
-                    <div class="form__row__item col-md-6">
-                      <input type="text" placeholder="Time End" class="form__input" required>
+                      <div class="input-append date form-datetime-id">
+                        <input type="text" placeholder="End - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
+                      </div>
                     </div>
                     <div class="form__row__item">
                       <input type="text" placeholder="How many units?" class="form__input" required>
@@ -593,7 +591,8 @@
 <script src="js/jquery.ripples-min.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/swiper.min.js"></script>
-<script src="js/datepicker.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/simple-lightbox.min.js"></script>
 <script>
   drawTestimonials();
@@ -758,12 +757,20 @@
   }
 
   function contactForm() {
-    $('.form-date-id').each(function() {
-      $(this).datepicker({
-        format: "dd/mm/yyyy"
-      }).on('change', function() {
-        $(this).datepicker('hide');
-      });
+    $('.form-datetime-id').each(function() {
+      if ($(this).data('mode') == 'date') {
+        $(this).datetimepicker({
+            pickTime: false,
+            format: 'dd/MM/yyyy'
+          })
+          .on('changeDate', function() {
+            $(this).datetimepicker('hide');
+          });
+      } else {
+        $(this).datetimepicker({
+          pickSeconds: false
+        });
+      }
     });
 
     resetForms();
