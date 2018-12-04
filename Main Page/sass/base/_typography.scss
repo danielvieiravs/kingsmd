@@ -19,9 +19,9 @@ body {
 
   &--main {
     display: block;
-    font-size: 6rem;
+    font-size: 10rem;
     font-weight: 400;
-    letter-spacing: 2rem;
+    letter-spacing: 1rem;
     padding-bottom: 2rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -40,11 +40,11 @@ body {
 
   &--sub {
     display: block;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
-    letter-spacing: 1rem;
+    letter-spacing: .5rem;
     animation: moveInRight 1s ease-out;
-    text-transform: lowercase;
+    text-transform: none;
 
     @include respond(phone) {
       letter-spacing: 0.5rem;
@@ -65,7 +65,7 @@ body {
   padding-bottom: 2rem;
   color: $color-primary-dark;
 
-  &--color-1 {
+  &-color--1 {
     color: $color-grey-light-3;
   }
 

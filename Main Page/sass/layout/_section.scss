@@ -11,9 +11,10 @@
   }
 
   &__tours {
-    padding: 0rem 5rem 10rem 5rem;
+    padding: 5rem 5rem 10rem 5rem;
     background-color: $color-grey-light-1;
     min-height: 100vh;
+    text-align: center;
 
     &__title {
       padding: 2rem 4rem;
@@ -70,14 +71,15 @@
         &__text {
           text-decoration: none !important;
           color: $color-primary !important;
-          padding: 2rem;
+          padding: 1rem 0;
+          margin-right: 2rem;
           font-size: $default-font-size;
           cursor: pointer;
           border-bottom: 2px solid transparent;
 
           &--active {
-            color: $color-primary-dark !important;
-            border-bottom: 2px solid $color-primary-dark;
+            color: $color-grey-light-2 !important;
+            border-bottom: 1px solid $color-grey-light-3;
           }
 
           &:hover {
