@@ -72,14 +72,9 @@
           <h2 class="heading-secondary heading-secondary-color--1 section__geral__container__title__top">
             Who we are
           </h2>
-          <p class="section__geral__container__text section__geral__container__text--1">Here at J Kings Movements &
-            Detailing, we believe it’s all about knowing what you want and providing the service that your vehicle
-            needs.
+          <p class="section__geral__container__text section__geral__container__text--1">Here at J Kings Movements & Detailing, we believe it’s all about knowing what you want and providing the service that your vehicle needs.
           </p>
-          <p class=" section__geral__container__text section__geral__container__text--2">With over 20 years of
-            experience, our team of specialised and dedicated technicians have provided bespoke Mobile Automotive
-            Detailing & Vehicle Movements services to a host of dealerships across the UK including Aston Martin,
-            Ferrari, Jaguar,
+          <p class=" section__geral__container__text section__geral__container__text--2">With over 20 years of experience, our team of specialised and dedicated technicians have provided bespoke Mobile Automotive Detailing & Vehicle Movements services to a host of dealerships across the UK including Aston Martin, Ferrari, Jaguar,
             Audi, BMW and a host of other dealerships across the UK.
           </p>
         </div>
@@ -135,8 +130,7 @@
         <h2 class="heading-secondary heading-secondary-color--1 section__geral__container__title__top">
           Gallery
         </h2>
-        <p class="section__geral__container__text section__geral__container__text--1"> Here are some of our
-          favourite projects we have worked on recently.
+        <p class="section__geral__container__text section__geral__container__text--1"> Here are some of our favourite projects we have worked on recently.
         </p>
       </div>
       <div id="gallery-photos" class="section__tours__gallery gallery">
@@ -201,130 +195,137 @@
             <!-- form 1 -->
             <form id="form-contact-1" class="form form-contact-iteration">
               <div class="form__row">
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Type</label>
-                  <div>
-                    <select class="form__select" required>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Details</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Name" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="email" placeholder="Email" class="form__input" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Vehicle information</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-6">
+                      <div>
+                        <select class="form__select" required>
                       <option value="">-- type --</option>
                       <option value="external">Trade Plated Drive</option>
                       <option value="internal">Transported</option>
                     </select>
-                  </div>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Vehicle</label>
-                  <div>
-                    <select class="form__select" required>
-                      <option data-active="contact-form-1-vehicle" value="">-- vehicle --</option>
+                      </div>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <div>
+                        <select class="form__select" required>
+                      <option data-active="contact-form-1-vehicle" value="">-- state --</option>
                       <option data-active="contact-form-1-vehicle" value="new">New</option>
                       <option data-active="contact-form-1-vehicle" value="used">Used</option>
                     </select>
+                      </div>
+                    </div>
+                    <div data-changed="contact-form-1-vehicle" data-active="used" class="form__row__item col-md-6">
+                      <input type="text" placeholder="Registration" class="form__input" required>
+                    </div>
+                    <div data-changed="contact-form-1-vehicle" data-active="new" class="form__row__item col-md-6">
+                      <input type="text" placeholder="Last 8 digit of a chassis" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Make" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Model" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Colour" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Year" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Weight (Kg)" class="form__input" required>
+                    </div>
                   </div>
                 </div>
-                <div data-changed="contact-form-1-vehicle" data-active="used" class="form__row__item col-md-6">
-                  <label class="form__label">Vehicle Registration</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div data-changed="contact-form-1-vehicle" data-active="new" class="form__row__item col-md-6">
-                  <label class="form__label">Last 8 digit of a chassis</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">Vehicle information</label>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Make</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Model</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Colour</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Year</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Vehicle Weight (Kg)</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">One way OR Return</label>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Return address</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Return date</label>
-                  <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">Transfer</label>
-                  <div>
-                    <select class="form__select" required>
-                      <option value="">-- transfer --</option>
-                      <option value="hand_over">Hand over</option>
-                      <option value="dealer_transfer">Dealer Transfer</option>
-                    </select>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">One way OR Return</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Return address" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Return date" class="form__input form-date-id" data-toggle="datepicker" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <div>
+                        <select class="form__select" required>
+                          <option value="">-- transfer --</option>
+                          <option value="hand_over">Hand over</option>
+                          <option value="dealer_transfer">Dealer Transfer</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="form__row__item">
-                  <label class="form__label">Collection point A</label>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Collection Points</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="A - Full address" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="A - Post code" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="A - Point of Contact" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="B - Full address" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="B - Post code" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="B - Point of Contact" class="form__input" required>
+                    </div>
+                  </div>
                 </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Full address</label>
-                  <input type="text" class="form__input" required>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">In / Out</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Date In" class="form__input form-date-id" data-toggle="datepicker" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Time In" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Date Out" class="form__input form-date-id" data-toggle="datepicker" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Time Out" class="form__input" required>
+                    </div>
+                  </div>
                 </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Post code</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Point of Contact</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">Collection point B</label>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Full address</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Post code</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Point of Contact</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">In</label>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Date</label>
-                  <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Time</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">Out</label>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Date</label>
-                  <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Time</label>
-                  <input type="text" class="form__input" required>
-                </div>
+
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
@@ -336,99 +337,114 @@
             <!-- form 2 -->
             <form id="form-contact-2" class="form section__book--hidden form-contact-iteration">
               <div class="form__row">
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Type</label>
-                  <div>
-                    <select class="form__select" required>
-                      <option value="">-- type --</option>
-                      <option value="external">External</option>
-                      <option value="internal">Internal</option>
-                      <option value="machine_polishing">Machine Polishing</option>
-                      <option value="full_detailing">Full detailing</option>
-                    </select>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Details</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Name" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="email" placeholder="Email" class="form__input" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
+                    </div>
                   </div>
                 </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Vehicle</label>
-                  <div>
-                    <select class="form__select" required>
-                      <option data-active="contact-form-2-vehicle" value="">-- vehicle --</option>
-                      <option data-active="contact-form-2-vehicle" value="new">New</option>
-                      <option data-active="contact-form-2-vehicle" value="used">Used</option>
-                    </select>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Vehicle information</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-6">
+                      <div>
+                        <select class="form__select" required>
+                          <option value="">-- type --</option>
+                          <option value="external">External</option>
+                          <option value="internal">Internal</option>
+                          <option value="machine_polishing">Machine Polishing</option>
+                          <option value="full_detailing">Full detailing</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <div>
+                        <select class="form__select" required>
+                          <option data-active="contact-form-2-vehicle" value="">-- state --</option>
+                          <option data-active="contact-form-2-vehicle" value="new">New</option>
+                          <option data-active="contact-form-2-vehicle" value="used">Used</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div data-changed="contact-form-2-vehicle" data-active="used" class="form__row__item col-md-6">
+                      <input type="text" placeholder="Vehicle Registration" class="form__input" required>
+                    </div>
+                    <div data-changed="contact-form-2-vehicle" data-active="new" class="form__row__item col-md-6">
+                      <label class="form__label"></label>
+                      <input type="text" placeholder="Last 8 digit of a chassis" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Make" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Model" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Colour" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Year" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Full address" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Post code" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <div>
+                        <select class="form__select" required>
+                          <option value="">-- info --</option>
+                          <option value="indoor">Indoor</option>
+                          <option value="outdoor">Outdoor</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div data-changed="contact-form-2-vehicle" data-active="used" class="form__row__item col-md-6">
-                  <label class="form__label">Vehicle Registration</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div data-changed="contact-form-2-vehicle" data-active="new" class="form__row__item col-md-6">
-                  <label class="form__label">Last 8 digit of a chassis</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">Vehicle information</label>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Make</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Model</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Colour</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Year</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">Customer Address</label>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Full address</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Post code</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Point of Contact</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item">
-                  <label class="form__label">Vehicle Address</label>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Full address</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Post code</label>
-                  <input type="text" class="form__input" required>
-                </div>
-                <div class="form__row__item col-md-4">
-                  <label class="form__label">Info</label>
-                  <div>
-                    <select class="form__select" required>
-                      <option value="">-- info --</option>
-                      <option value="indoor">Indoor</option>
-                      <option value="outdoor">Outdoor</option>
-                    </select>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Customer Address</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Full address" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Post code" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Point of Contact" class="form__input" required>
+                    </div>
                   </div>
                 </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Set up Date After or Before Xam/pm</label>
-                  <input type="text" class="form__input" required>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Xam/pm</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Set up Date After or Before" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Set down Date After or Before" class="form__input" required>
+                    </div>
+                  </div>
                 </div>
-                <div class="form__row__item col-md-6">
-                  <label class="form__label">Set down Date After or Before Xam/pm</label>
-                  <input type="text" class="form__input" required>
-                </div>
+
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
@@ -440,53 +456,64 @@
             <!-- form 3 -->
             <form id="form-contact-3" class="form section__book--hidden form-contact-iteration">
               <div class="form__row">
-                <div class="form__row">
-                  <div class="form__row__item">
-                    <label class="form__label">Event Name</label>
-                    <input type="text" class="form__input" required>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Details</label>
                   </div>
-                  <div class="form__row__item">
-                    <label class="form__label">Event Date</label>
-                  </div>
-                  <div class="form__row__item col-md-6">
-                    <label class="form__label">To</label>
-                    <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
-                  </div>
-                  <div class="form__row__item col-md-6">
-                    <label class="form__label">From</label>
-                    <input type="text" class="form__input form-date-id" data-toggle="datepicker" required>
-                  </div>
-                  <div class="form__row__item">
-                    <label class="form__label">Event Time</label>
-                  </div>
-                  <div class="form__row__item col-md-6">
-                    <label class="form__label">Start</label>
-                    <input type="text" class="form__input" required>
-                  </div>
-                  <div class="form__row__item col-md-6">
-                    <label class="form__label">End</label>
-                    <input type="text" class="form__input" required>
-                  </div>
-                  <div class="form__row__item">
-                    <label class="form__label">Event Location</label>
-                  </div>
-                  <div class="form__row__item col-md-4">
-                    <label class="form__label">Full address</label>
-                    <input type="text" class="form__input" required>
-                  </div>
-                  <div class="form__row__item col-md-4">
-                    <label class="form__label">Post code</label>
-                    <input type="text" class="form__input" required>
-                  </div>
-                  <div class="form__row__item col-md-4">
-                    <label class="form__label">Point of Contact</label>
-                    <input type="text" class="form__input" required>
-                  </div>
-                  <div class="form__row__item">
-                    <label class="form__label">How many units?</label>
-                    <input type="text" class="form__input" required>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Name" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="email" placeholder="Email" class="form__input" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
+                    </div>
                   </div>
                 </div>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Event Details</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item">
+                      <input type="text" placeholder="Name" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Date To" class="form__input form-date-id" data-toggle="datepicker" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Date From" class="form__input form-date-id" data-toggle="datepicker" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Time Start" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-6">
+                      <input type="text" placeholder="Time End" class="form__input" required>
+                    </div>
+                    <div class="form__row__item">
+                      <input type="text" placeholder="How many units?" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Event Location</label>
+                  </div>
+                  <div class="form__row__group__content col-md-12">
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Full address" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Post code" class="form__input" required>
+                    </div>
+                    <div class="form__row__item col-md-4">
+                      <input type="text" placeholder="Point of Contact" class="form__input" required>
+                    </div>
+                  </div>
+                </div>
+
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
@@ -519,10 +546,8 @@
           </div>
           <div class="col-sm-2 footer__col">
             <ul class="list-unstyled">
-              <li class="footer__row__opt"><a href="https://www.facebook.com/JKing-Movements-Detailing-803552906699190/"
-                  target="_blank" class="footer__row__opt__a">Facebook</a></li>
-              <li class="footer__row__opt"><a href="https://www.instagram.com/jking_movements_and_detailing/?fbclid=IwAR2sadkWpDhWwMcJWRJhQ857otmJwtLxu7BEsFhODb5IYsJ8pt_SRoOds7s"
-                  target="_blank" class="footer__row__opt__a">Instagram</a></li>
+              <li class="footer__row__opt"><a href="https://www.facebook.com/JKing-Movements-Detailing-803552906699190/" target="_blank" class="footer__row__opt__a">Facebook</a></li>
+              <li class="footer__row__opt"><a href="https://www.instagram.com/jking_movements_and_detailing/?fbclid=IwAR2sadkWpDhWwMcJWRJhQ857otmJwtLxu7BEsFhODb5IYsJ8pt_SRoOds7s" target="_blank" class="footer__row__opt__a">Instagram</a></li>
             </ul>
           </div>
           <div class="col-sm-2 footer__col">
@@ -534,8 +559,7 @@
           </div>
           <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 footer__col footer__row__desc">
             <h3 class="footer__row__desc__title">Kings Movement & Detailing</h3>
-            <p class="footer__row__desc__info">We believe it’s all about knowing what you want and providing the
-              service that your vehicle needs.</p>
+            <p class="footer__row__desc__info">We believe it’s all about knowing what you want and providing the service that your vehicle needs.</p>
           </div>
         </div>
       </div>
@@ -554,9 +578,7 @@
         <h2 class="heading-secondary u-margin-small">Start booking now</h2>
         <h3 class="heading-tertiary u-margin-small">Important&ndash; Please read these terms before booking</h3>
         <p class="popup__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores debitis obcaecati distinctio,
-          repellendus corrupti repellat, asperiores vel et maxime quas quod voluptatibus quasi, eligendi blanditiis?
-          Quisquam inventore modi quidem.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores debitis obcaecati distinctio, repellendus corrupti repellat, asperiores vel et maxime quas quod voluptatibus quasi, eligendi blanditiis? Quisquam inventore modi quidem.
         </p>
         <div class="form">
           <a href="#section-book" class="popup-close-id btn form__button">Book now</a>
@@ -588,7 +610,7 @@
       // Remove links that don't actually link to anything
       .not('[href="#"]')
       .not('[href="#0"]')
-      .click(function (event) {
+      .click(function(event) {
         if ($('.navigation__checkbox').prop('checked')) {
           $('.navigation__checkbox').prop('checked', false)
         } else {
@@ -622,7 +644,7 @@
             event.preventDefault();
             $('html, body').animate({
               scrollTop: target.offset().top
-            }, 1000, function () {
+            }, 1000, function() {
               // Callback after animation
               // Must change focus!
               var $target = $(target);
@@ -677,10 +699,10 @@
   }
 
   function initScroll() {
-    $(window).scroll(function () {
+    $(window).scroll(function() {
       refreshScroll();
     });
-    $('#navigation-back-top').off().on('click', function () {
+    $('#navigation-back-top').off().on('click', function() {
       $('html, body').animate({
         scrollTop: 0
       }, 600);
@@ -700,14 +722,14 @@
       $('#navigation-back-top').hide();
     }
     clearTimeout(self.timeoutCheck);
-    self.timeoutCheck = setTimeout(function () {
+    self.timeoutCheck = setTimeout(function() {
       autoActive();
     }, 50);
 
     function autoActive() {
-      $('.navigation-tabs-id').each(function () {
+      $('.navigation-tabs-id').each(function() {
         var sc = $(this);
-        sc.find('a').each(function () {
+        sc.find('a').each(function() {
           var currLink = $(this);
           var refElement = $(currLink.attr('href'));
           var elT = Math.floor(refElement.position().top);
@@ -736,21 +758,21 @@
   }
 
   function contactForm() {
-    $('.form-date-id').each(function () {
+    $('.form-date-id').each(function() {
       $(this).datepicker({
         format: "dd/mm/yyyy"
-      }).on('change', function () {
+      }).on('change', function() {
         $(this).datepicker('hide');
       });
     });
 
     resetForms();
-    $('.form-contact-iteration').each(function () {
-      $(this).find('select').on('change', function () {
+    $('.form-contact-iteration').each(function() {
+      $(this).find('select').on('change', function() {
         var acOpt = $(this).find('option:selected').data('active');
         if (acOpt) {
           var valOpt = $(this).find('option:selected').val();
-          $('.form__row__item').each(function () {
+          $('.form__row__item').each(function() {
             if ($(this).data('changed') == acOpt && $(this).data('active') == valOpt) {
               $(this).removeClass('form__row__item--disabled');
             } else if ($(this).data('changed') == acOpt && $(this).data('active') !== valOpt) {
@@ -763,31 +785,31 @@
     });
     showTab(1);
 
-    $('#form-contact-tab-1').off().on('click', function () {
+    $('#form-contact-tab-1').off().on('click', function() {
       showTab(1);
     });
 
-    $('#form-contact-tab-2').off().on('click', function () {
+    $('#form-contact-tab-2').off().on('click', function() {
       showTab(2);
     });
 
-    $('#form-contact-tab-3').off().on('click', function () {
+    $('#form-contact-tab-3').off().on('click', function() {
       showTab(3);
     });
 
-    $('#form-contact-1').on('submit', function (e) {
+    $('#form-contact-1').on('submit', function(e) {
       resetForms();
       alert('1');
       e.preventDefault();
     });
 
-    $('#form-contact-2').on('submit', function (e) {
+    $('#form-contact-2').on('submit', function(e) {
       resetForms();
       alert('2');
       e.preventDefault();
     });
 
-    $('#form-contact-3').on('submit', function (e) {
+    $('#form-contact-3').on('submit', function(e) {
       resetForms();
       alert('3');
       e.preventDefault();
@@ -804,7 +826,7 @@
       $('#form-contact-1').trigger('reset');
       $('#form-contact-2').trigger('reset');
       $('#form-contact-3').trigger('reset');
-      $('.form__row__item').each(function () {
+      $('.form__row__item').each(function() {
         if ($(this).data('changed')) {
           $(this).addClass('form__row__item--disabled');
         }
@@ -826,7 +848,7 @@
           'time': ti,
           'message': me
         },
-        success: function (res) {
+        success: function(res) {
           resetForms();
         }
       });

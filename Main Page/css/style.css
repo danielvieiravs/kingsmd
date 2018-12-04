@@ -503,6 +503,14 @@ sas .btn-text:hover {
 .form__row {
   display: inline-table;
   width: 100%; }
+  .form__row__group {
+    padding: 0; }
+    .form__row__group__title {
+      padding: 1rem 0rem 0rem !important; }
+    .form__row__group__content {
+      padding: 2rem 1rem 1rem;
+      background-color: #f3f3f3;
+      border-radius: 0.3rem; }
   .form__row__item {
     padding: 0 1rem 1rem; }
     .form__row__item--disabled {
@@ -562,7 +570,16 @@ sas .btn-text:hover {
     .form__area:focus:invalid, .form__input:focus:invalid {
       border-bottom: 0.3rem solid #000000; }
   .form__area::-webkit-input-placeholder, .form__input::-webkit-input-placeholder {
-    color: #3f3f3f; }
+    color: #888; }
+  .form__area::placeholder, .form__input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #888; }
+  .form__area:-ms-input-placeholder, .form__input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #888; }
+  .form__area::-ms-input-placeholder, .form__input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #888; }
 
 .form__label {
   font-size: 1.5rem;
@@ -1088,7 +1105,7 @@ sas .btn-text:hover {
     display: none; }
   .section__book__form__tabs {
     display: flex;
-    padding: 0 0 4rem; }
+    padding: 0 0 3rem; }
     .section__book__form__tabs--disabled {
       pointer-events: none;
       opacity: 0.5; }
