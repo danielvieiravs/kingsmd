@@ -200,11 +200,11 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Details</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-6">
+                  <div data-group="Details" class="form__row__group__content col-md-12">
+                    <div data-item="Name" class="form__row__item col-md-6">
                       <input type="text" placeholder="Name" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Email" class="form__row__item col-md-6">
                       <input type="email" placeholder="Email" class="form__input" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
                     </div>
                   </div>
@@ -214,44 +214,44 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Vehicle information</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-6">
+                  <div data-group="Vehicle information" class="form__row__group__content col-md-12">
+                    <div data-item="Type" class="form__row__item col-md-6">
                       <div>
                         <select class="form__select" required>
-                      <option value="">-- type --</option>
-                      <option value="external">Trade Plated Drive</option>
-                      <option value="internal">Transported</option>
-                    </select>
+                          <option value="">-- type --</option>
+                          <option value="external">Trade Plated Drive</option>
+                          <option value="internal">Transported</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="State" class="form__row__item col-md-6">
                       <div>
                         <select class="form__select" required>
-                      <option data-active="contact-form-1-vehicle" value="">-- state --</option>
-                      <option data-active="contact-form-1-vehicle" value="new">New</option>
-                      <option data-active="contact-form-1-vehicle" value="used">Used</option>
-                    </select>
+                          <option data-active="contact-form-1-vehicle" value="">-- state --</option>
+                          <option data-active="contact-form-1-vehicle" value="new">New</option>
+                          <option data-active="contact-form-1-vehicle" value="used">Used</option>
+                        </select>
                       </div>
                     </div>
-                    <div data-changed="contact-form-1-vehicle" data-active="used" class="form__row__item col-md-6">
+                    <div data-item="Registration" data-changed="contact-form-1-vehicle" data-active="used" class="form__row__item col-md-6">
                       <input type="text" placeholder="Registration" class="form__input" required>
                     </div>
-                    <div data-changed="contact-form-1-vehicle" data-active="new" class="form__row__item col-md-6">
+                    <div data-item="Last 8 digit of a chassis" data-changed="contact-form-1-vehicle" data-active="new" class="form__row__item col-md-6">
                       <input type="text" placeholder="Last 8 digit of a chassis" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Make" class="form__row__item col-md-6">
                       <input type="text" placeholder="Make" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Model" class="form__row__item col-md-6">
                       <input type="text" placeholder="Model" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Colour" class="form__row__item col-md-4">
                       <input type="text" placeholder="Colour" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Year" class="form__row__item col-md-4">
                       <input type="text" placeholder="Year" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Weight (Kg)" class="form__row__item col-md-4">
                       <input type="text" placeholder="Weight (Kg)" class="form__input" required>
                     </div>
                   </div>
@@ -261,16 +261,16 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">One way OR Return</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-4">
+                  <div data-group="One way OR Return" class="form__row__group__content col-md-12">
+                    <div data-item="Return address" class="form__row__item col-md-4">
                       <input type="text" placeholder="Return address" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Return date" class="form__row__item col-md-4">
                       <div class="input-append date form-datetime-id" data-mode="date">
                         <input type="text" placeholder="Return date" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
                       </div>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Transfer" class="form__row__item col-md-4">
                       <div>
                         <select class="form__select" required>
                           <option value="">-- transfer --</option>
@@ -286,23 +286,23 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Collection Points</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-4">
+                  <div data-group="Collection Points" class="form__row__group__content col-md-12">
+                    <div data-item="A - Full address" class="form__row__item col-md-4">
                       <input type="text" placeholder="A - Full address" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="A - Post code" class="form__row__item col-md-4">
                       <input type="text" placeholder="A - Post code" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="A - Point of Contact" class="form__row__item col-md-4">
                       <input type="text" placeholder="A - Point of Contact" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="B - Full address" class="form__row__item col-md-4">
                       <input type="text" placeholder="B - Full address" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="B - Post code" class="form__row__item col-md-4">
                       <input type="text" placeholder="B - Post code" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="B - Point of Contact" class="form__row__item col-md-4">
                       <input type="text" placeholder="B - Point of Contact" class="form__input" required>
                     </div>
                   </div>
@@ -312,13 +312,13 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">In / Out</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-6">
+                  <div data-group="In / Out" class="form__row__group__content col-md-12">
+                    <div data-item="In - Date/Time" class="form__row__item col-md-6">
                       <div class="input-append date form-datetime-id">
                         <input type="text" placeholder="In - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
                       </div>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Out - Date/Time" class="form__row__item col-md-6">
                       <div class="input-append date form-datetime-id">
                         <input type="text" placeholder="Out - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
                       </div>
@@ -342,11 +342,11 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Details</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-6">
+                  <div data-group="Details" class="form__row__group__content col-md-12">
+                    <div data-item="Name" class="form__row__item col-md-6">
                       <input type="text" placeholder="Name" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Email" class="form__row__item col-md-6">
                       <input type="email" placeholder="Email" class="form__input" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
                     </div>
                   </div>
@@ -356,8 +356,8 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Vehicle information</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-6">
+                  <div data-group="Vehicle information" class="form__row__group__content col-md-12">
+                    <div data-item="Type" class="form__row__item col-md-6">
                       <div>
                         <select class="form__select" required>
                           <option value="">-- type --</option>
@@ -368,7 +368,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="State" class="form__row__item col-md-6">
                       <div>
                         <select class="form__select" required>
                           <option data-active="contact-form-2-vehicle" value="">-- state --</option>
@@ -377,32 +377,31 @@
                         </select>
                       </div>
                     </div>
-                    <div data-changed="contact-form-2-vehicle" data-active="used" class="form__row__item col-md-6">
+                    <div data-item="Vehicle Registration" data-changed="contact-form-2-vehicle" data-active="used" class="form__row__item col-md-6">
                       <input type="text" placeholder="Vehicle Registration" class="form__input" required>
                     </div>
-                    <div data-changed="contact-form-2-vehicle" data-active="new" class="form__row__item col-md-6">
-                      <label class="form__label"></label>
+                    <div data-item="Last 8 digit of a chassis" data-changed="contact-form-2-vehicle" data-active="new" class="form__row__item col-md-6">
                       <input type="text" placeholder="Last 8 digit of a chassis" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Make" class="form__row__item col-md-6">
                       <input type="text" placeholder="Make" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Model" class="form__row__item col-md-6">
                       <input type="text" placeholder="Model" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Colour" class="form__row__item col-md-6">
                       <input type="text" placeholder="Colour" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Year" class="form__row__item col-md-6">
                       <input type="text" placeholder="Year" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Full address" class="form__row__item col-md-4">
                       <input type="text" placeholder="Full address" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Post code" class="form__row__item col-md-4">
                       <input type="text" placeholder="Post code" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Info" class="form__row__item col-md-4">
                       <div>
                         <select class="form__select" required>
                           <option value="">-- info --</option>
@@ -418,14 +417,14 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Customer Address</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-4">
+                  <div data-group="Customer Address" class="form__row__group__content col-md-12">
+                    <div data-item="Full address" class="form__row__item col-md-4">
                       <input type="text" placeholder="Full address" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Post code" class="form__row__item col-md-4">
                       <input type="text" placeholder="Post code" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Point of Contact" class="form__row__item col-md-4">
                       <input type="text" placeholder="Point of Contact" class="form__input" required>
                     </div>
                   </div>
@@ -435,11 +434,11 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Xam/pm</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-6">
+                  <div data-group="Xam/pm" class="form__row__group__content col-md-12">
+                    <div data-item="Set up Date After or Before" class="form__row__item col-md-6">
                       <input type="text" placeholder="Set up Date After or Before" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Set down Date After or Before" class="form__row__item col-md-6">
                       <input type="text" placeholder="Set down Date After or Before" class="form__input" required>
                     </div>
                   </div>
@@ -461,11 +460,11 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Details</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-6">
+                  <div data-group="Details" class="form__row__group__content col-md-12">
+                    <div data-item="Name" class="form__row__item col-md-6">
                       <input type="text" placeholder="Name" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Email" class="form__row__item col-md-6">
                       <input type="email" placeholder="Email" class="form__input" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
                     </div>
                   </div>
@@ -475,21 +474,21 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Event Details</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item">
+                  <div data-group="Event Details" class="form__row__group__content col-md-12">
+                    <div data-item="Name" class="form__row__item">
                       <input type="text" placeholder="Name" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="Start - Date/Time" class="form__row__item col-md-6">
                       <div class="input-append date form-datetime-id">
                         <input type="text" placeholder="Start - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
                       </div>
                     </div>
-                    <div class="form__row__item col-md-6">
+                    <div data-item="End - Date/Time" class="form__row__item col-md-6">
                       <div class="input-append date form-datetime-id">
                         <input type="text" placeholder="End - Date/Time" data-format="dd/MM/yyyy hh:mm:ss" class="add-on form__input"></input>
                       </div>
                     </div>
-                    <div class="form__row__item">
+                    <div data-item="How many units?" class="form__row__item">
                       <input type="text" placeholder="How many units?" class="form__input" required>
                     </div>
                   </div>
@@ -499,14 +498,14 @@
                   <div class="form__row__item form__row__group__title">
                     <label class="form__label">Event Location</label>
                   </div>
-                  <div class="form__row__group__content col-md-12">
-                    <div class="form__row__item col-md-4">
+                  <div data-group="Event Location" class="form__row__group__content col-md-12">
+                    <div data-item="Full address" class="form__row__item col-md-4">
                       <input type="text" placeholder="Full address" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Post code" class="form__row__item col-md-4">
                       <input type="text" placeholder="Post code" class="form__input" required>
                     </div>
-                    <div class="form__row__item col-md-4">
+                    <div data-item="Point of Contact" class="form__row__item col-md-4">
                       <input type="text" placeholder="Point of Contact" class="form__input" required>
                     </div>
                   </div>
@@ -782,9 +781,11 @@
           $('.form__row__item').each(function() {
             if ($(this).data('changed') == acOpt && $(this).data('active') == valOpt) {
               $(this).removeClass('form__row__item--disabled');
+              $(this).find('input').attr('required', true);
             } else if ($(this).data('changed') == acOpt && $(this).data('active') !== valOpt) {
               $(this).find('input').val('');
               $(this).addClass('form__row__item--disabled');
+              $(this).find('input').removeAttr('required');
             }
           });
         }
@@ -805,20 +806,17 @@
     });
 
     $('#form-contact-1').on('submit', function(e) {
-      resetForms();
-      alert('1');
+      sendEmail($('#form-contact-1'));
       e.preventDefault();
     });
 
     $('#form-contact-2').on('submit', function(e) {
-      resetForms();
-      alert('2');
+      sendEmail($('#form-contact-2'));
       e.preventDefault();
     });
 
     $('#form-contact-3').on('submit', function(e) {
-      resetForms();
-      alert('3');
+      sendEmail($('#form-contact-3'));
       e.preventDefault();
     });
 
@@ -840,20 +838,33 @@
       });
     }
 
-    function sendEmail() {
+    function sendEmail(parent) {
+      var obj = {};
+      var email = '';
+      parent.find('.form__row__group__content').each(function() {
+        var group = $(this).data('group');
+        obj[group] = obj[group] ? obj[group] : [];
+        $(this).find('.form__row__item').each(function() {
+          var item = $(this).data('item');
+          var value = $(this).find('input').length ? $(this).find('input').val() : $(this).find('select').val();
+          if (value !== '') {
+            obj[group].push({
+              prop: item,
+              value: value
+            });
+            if (group == 'Details' && item == 'Email') {
+              email = value;
+            }
+          }
+        });
+      });
       $.ajax({
         type: "POST",
         url: "mail.php",
         data: {
-          'receiver': 'fabiovieira79@hotmail.com',
-          'name': na,
-          'email': em,
-          'phone': ph,
-          'car': ca,
-          'service': se,
-          'date': da,
-          'time': ti,
-          'message': me
+          receptor: 'fabiovieira79@hotmail.com',
+          email: email,
+          data: obj
         },
         success: function(res) {
           resetForms();
