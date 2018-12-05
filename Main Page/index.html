@@ -152,7 +152,28 @@
         <a href="img/g_sixth.jpg" class="big">
           <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
         </a>
+
+        <!-- more -->
+        <a href="img/g_sixth.jpg" class="big section__tours__gallery__more__photo">
+          <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
+        </a>
+        <a href="img/g_sixth.jpg" class="big section__tours__gallery__more__photo">
+          <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
+        </a>
+        <a href="img/g_sixth.jpg" class="big section__tours__gallery__more__photo">
+          <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
+        </a>
+        <a href="img/g_sixth.jpg" class="big section__tours__gallery__more__photo">
+          <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
+        </a>
+        <a href="img/g_sixth.jpg" class="big section__tours__gallery__more__photo">
+          <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
+        </a>
+        <a href="img/g_sixth.jpg" class="big section__tours__gallery__more__photo">
+          <img src="img/g_sixth.jpg" alt="Tour photo" class="popup__img">
+        </a>
       </div>
+      <div id="gallery-photos-more" class="section__tours__gallery__more"><i class="fa fa-chevron-down section__tours__gallery__more__icon"></i></div>
     </section>
 
     <section id="section-stories" class="section__stories">
@@ -598,8 +619,8 @@
   navigation();
   initScroll();
   effectImage();
-  contactForm()
-  contactGallery()
+  contactForm();
+  initGallery();
   refreshScroll();
 
   function navigation() {
@@ -751,8 +772,26 @@
     });
   }
 
-  function contactGallery() {
+  function initGallery() {
     var gallery = $('#gallery-photos a').simpleLightbox();
+    $('#gallery-photos-more').off().on('click', function() {
+      var valScroll = $(window).scrollTop();
+      var icon = $(this).find('i');
+      if (icon.hasClass('fa-chevron-down')) {
+        $('.section__tours__gallery__more__photo').addClass('section__tours__gallery__more__photo--active');
+        icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        $(this).data('scroll', valScroll);
+        var last = $('.section__tours__gallery__more__photo').last();
+        valScroll = last.offset().top - last.outerHeight() - $('#navigation-id').outerHeight();
+      } else {
+        $('.section__tours__gallery__more__photo').removeClass('section__tours__gallery__more__photo--active');
+        icon.addClass('fa-chevron-down').removeClass('fa-chevron-up');
+        valScroll = $(this).data('scroll');
+      }
+      $('html, body').animate({
+        scrollTop: valScroll
+      }, 600);
+    });
   }
 
   function contactForm() {

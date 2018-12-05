@@ -1,5 +1,4 @@
 .section {
-
   &__about,
   &__book,
   &__feature,
@@ -11,7 +10,7 @@
   }
 
   &__tours {
-    padding: 5rem 5rem 10rem 5rem;
+    padding: 5rem 5rem 10rem;
     background-color: $color-grey-light-1;
     min-height: 100vh;
     text-align: center;
@@ -27,6 +26,27 @@
     &__gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+
+      &__more {
+        cursor: pointer;
+
+        &__icon {
+          color: $color-primary;
+          font-size: $swiper-pagination-font-size;
+
+          &:hover {
+            color: $color-primary-dark;
+          }
+        }
+
+        &__photo {
+          display: none;
+
+          &--active {
+            display: block;
+          }
+        }
+      }
     }
   }
 
