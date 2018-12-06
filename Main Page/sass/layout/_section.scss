@@ -1,5 +1,4 @@
 .section {
-
   &__about,
   &__book,
   &__feature,
@@ -99,9 +98,22 @@
           cursor: pointer;
           border-bottom: 2px solid transparent;
 
+          & i {
+            margin-left: 1rem;
+          }
+
+          & i.delete:hover {
+            color: $color-delete;
+          }
+
           &--active {
             color: $color-grey-light-2 !important;
             border-bottom: 1px solid $color-grey-light-3;
+          }
+
+          &--disabled {
+            opacity: 0.5;
+            pointer-events: none;
           }
 
           &:hover {

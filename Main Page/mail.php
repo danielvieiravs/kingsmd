@@ -18,11 +18,18 @@
     </tr>';
 
     foreach ($value as $data) {
-      $content .=
-      '<tr style="font-size: 15px;">
-        <td style="font-weight: bold; padding: 5px 25px;">'.$data['prop'].'</td>
-        <td>'.$data['value'].'</td>
-      </tr>';
+      if($data['title']) {
+        $content .=
+        '<tr style="font-size: 15px;">
+          <td style="font-weight: bold; padding: 15px 25px 10px 0;">'.$data['title'].'</td>
+        </tr>';
+      } else {
+        $content .=
+        '<tr style="font-size: 15px;">
+          <td style="font-weight: bold; padding: 5px 25px;">'.$data['prop'].'</td>
+          <td>'.$data['value'].'</td>
+        </tr>';
+      }
     }
   }
   $content .= '</table></body></html>';
