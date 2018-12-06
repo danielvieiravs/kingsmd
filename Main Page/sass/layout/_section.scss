@@ -1,4 +1,5 @@
 .section {
+
   &__about,
   &__book,
   &__feature,
@@ -29,6 +30,7 @@
 
       &__more {
         cursor: pointer;
+        padding-top: 2rem;
 
         &__icon {
           color: $color-primary;
