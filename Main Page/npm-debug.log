@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'watch:scss' ]
+2 info using npm@3.10.10
+3 info using node@v6.15.1
+4 warn invalid config proxy="http:4444"
+5 warn invalid config Must be a full url with 'http://'
+6 verbose stack Error: missing script: watch:scss
+6 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:151:19)
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:61:5
+6 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+6 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+6 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+6 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+6 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:243:12
+6 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+6 verbose stack     at tryToString (fs.js:457:3)
+6 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:444:12)
+7 verbose cwd /home/danielv/Developer/5DevelopersPlus1/Git/kingsmd/Main Page
+8 error Linux 4.4.0-139-generic
+9 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "watch:scss"
+10 error node v6.15.1
+11 error npm  v3.10.10
+12 error missing script: watch:scss
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
