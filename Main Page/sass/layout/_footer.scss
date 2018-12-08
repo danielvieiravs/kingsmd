@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-grey-dark-3;
-  padding: 8rem 0;
+  padding: 0;
   font-size: 1.4rem;
 
   &__container {
@@ -33,6 +33,12 @@
     }
 
     &__desc {
+      text-align: center;
+
+      &__logo {
+        height: 20rem;
+      }
+
       &__title {
         font-size: $title-small-font-size;
         margin-top: 0 !important;
@@ -49,6 +55,11 @@
 
   &__col {
     margin-right: 0 !important;
+    padding: 8rem 0;
+
+    &--logo {
+      padding-top: 2rem;
+    }
 
     &__copyright {
       text-align: end;
