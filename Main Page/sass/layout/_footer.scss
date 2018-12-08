@@ -41,6 +41,10 @@
         opacity: 0.8;
         cursor: pointer;
 
+        &--maps {
+          height: 4.8rem;
+        }
+
         &:hover {
           opacity: 1;
         }
