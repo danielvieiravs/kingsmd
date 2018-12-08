@@ -35,6 +35,17 @@
     &__desc {
       text-align: center;
 
+      &__social {
+        height: 4rem;
+        padding: 1rem 1rem 0 0;
+        opacity: 0.8;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
       &__logo {
         height: 20rem;
       }

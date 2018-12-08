@@ -558,8 +558,7 @@ body {
   font-size: 1.5rem;
   display: inline-block;
   position: relative;
-  padding: 0 0.6rem;
-  margin: 1rem 0 0; }
+  padding: 0 0.6rem; }
   .form__radio--space {
     padding: 0 2rem; }
   .form__radio__text {
@@ -894,6 +893,13 @@ body {
     padding: 0; }
   .footer__row__desc {
     text-align: center; }
+    .footer__row__desc__social {
+      height: 4rem;
+      padding: 1rem 1rem 0 0;
+      opacity: 0.8;
+      cursor: pointer; }
+      .footer__row__desc__social:hover {
+        opacity: 1; }
     .footer__row__desc__logo {
       height: 20rem; }
     .footer__row__desc__title {
