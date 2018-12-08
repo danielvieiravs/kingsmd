@@ -503,6 +503,9 @@ body {
 .form__row {
   display: inline-table;
   width: 100%; }
+  .form__row--flex {
+    display: flex;
+    align-items: center; }
   .form__row__group {
     padding: 0;
     background-color: #f3f3f3;
@@ -550,6 +553,48 @@ body {
 
 .form__area {
   resize: vertical; }
+
+.form__switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px; }
+  .form__switch--left {
+    margin-left: 1rem; }
+  .form__switch__input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+    .form__switch__input:checked + .form__switch__slider {
+      background-color: #3f3f3f; }
+    .form__switch__input:focus + .form__switch__slider {
+      box-shadow: 0 0 1px #3f3f3f; }
+    .form__switch__input:checked + .form__switch__slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px); }
+  .form__switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px; }
+    .form__switch__slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 50%; }
 
 .form__area, .form__input {
   font-size: 1.5rem;
