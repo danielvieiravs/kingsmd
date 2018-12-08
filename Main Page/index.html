@@ -274,9 +274,16 @@
 
                 <div class="form__row__group col-md-12">
                   <div class="form__row__item form__row--flex form__row__group__title">
-                    <label class="form__label">One way OR Return</label>
-                    <label class="form__radio radio-inline"><input type="radio" data-active="one_way_or_return" class="form__radio__input" checked>Return</label>
-                    <label class="form__radio radio-inline"><input type="radio" data-disabled="one_way_or_return" class="form__radio__input">One Way</label>
+                    <div class="form__radio--space">
+                      <div class="form__radio">
+                        <input type="radio" id="one_way_or_return1" data-active="one_way_or_return" checked name="one_way_or_return" class="form__radio__input">
+                        <label for="one_way_or_return1" class="form__radio__text">Return</label>
+                      </div>
+                      <div class="form__radio">
+                        <input type="radio" id="one_way_or_return2" data-disabled="one_way_or_return" name="one_way_or_return" class="form__radio__input">
+                        <label for="one_way_or_return2" class="form__radio__text">One Way</label>
+                      </div>
+                    </div>
                   </div>
                   <div data-group="One way OR Return" class="form__row__group__content col-md-12">
                     <div data-disabled="one_way_or_return" data-item="Return address" class="form__row__item col-md-4">
@@ -848,18 +855,18 @@
         }
       });
       $(this).find('.form__radio__input').on('change', function() {
-        var valData = $(this).data('disabled') ? $(this).data('disabled') : false;
-        valData = $(this).data('active') ? $(this).data('active') : valData;
+        var valDisabled = $(this).data('disabled');
         var valActive = $(this).data('active');
-        var valOpt = $(this).prop('checked');
 
-        if (valData) {
+        if (valDisabled || valActive) {
+          var valData = valDisabled ? valDisabled : valActive;
           $('.form__row__item[data-disabled="' + valData + '"]').each(function() {
-            if (valOpt) {
+            if (valActive) {
               $(this).removeClass('form__row__item--disabled');
               $(this).find('input').attr('required', true);
               $(this).find('select').attr('required', true);
-            } else {
+            }
+            if (valDisabled) {
               $(this).find('input').val('');
               $(this).addClass('form__row__item--disabled');
               $(this).find('input').removeAttr('required');

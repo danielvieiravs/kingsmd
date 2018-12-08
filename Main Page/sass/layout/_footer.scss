@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-grey-dark-3;
-  padding: 0;
+  padding: 0 0 8rem;
   font-size: 1.4rem;
 
   &__container {
@@ -55,7 +55,7 @@
 
   &__col {
     margin-right: 0 !important;
-    padding: 8rem 0;
+    padding: 8rem 0 0;
 
     &--logo {
       padding-top: 2rem;
