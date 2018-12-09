@@ -904,7 +904,8 @@ body {
     padding: 0 0 0.7rem;
     display: block;
     font-weight: 300;
-    text-align: center; }
+    width: 30rem;
+    margin: auto; }
     .footer__row__opt__a:hover {
       color: #fff;
       font-weight: 400; }
