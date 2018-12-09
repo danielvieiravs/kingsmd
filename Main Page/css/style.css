@@ -145,10 +145,11 @@ body {
       font-size: 2.5rem; } }
 
 .heading-terciary {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  letter-spacing: .2rem; }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -181,6 +182,9 @@ body {
 
 .u-padding-1 {
   padding: 0 4rem; }
+
+.u-padding-2 {
+  padding: .5rem 0 0 0; }
 
 .u-flex {
   display: flex; }
@@ -767,13 +771,6 @@ body {
     width: 100%; }
   .popup__text {
     font-size: 1.4rem;
-    margin-bottom: 4rem;
-    -moz-column-count: 2;
-    -moz-column-gap: 4rem;
-    -moz-column-rule: 0.1rem solid #3f3f3f;
-    column-count: 2;
-    column-gap: 4rem;
-    column-rule: 0.1rem solid #3f3f3f;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
@@ -850,15 +847,19 @@ body {
       height: 100vh; } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%); } }
   .header__text-box {
     position: absolute;
     top: 45%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-family: UniversityRomanRegular; }
+    font-family: UniversityRomanRegular;
+    color: #ddd;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .4rem; }
   .header__bold {
     font-weight: bold; }
   .header__button {
@@ -902,7 +903,7 @@ body {
   .footer__row__desc {
     text-align: center; }
     .footer__row__desc__social {
-      height: 4rem;
+      height: 3rem;
       padding: 1rem 1rem 0 0;
       opacity: 0.8;
       cursor: pointer; }
@@ -911,7 +912,7 @@ body {
       .footer__row__desc__social:hover {
         opacity: 1; }
     .footer__row__desc__logo {
-      height: 20rem; }
+      height: 10rem; }
     .footer__row__desc__title {
       font-size: 2.2rem;
       margin-top: 0 !important;
@@ -1070,7 +1071,7 @@ body {
     top: .5rem;
     left: 3rem; }
   .navigation__logo {
-    height: 40rem; }
+    height: 20rem; }
   .navigation__checkbox {
     display: none; }
   .navigation__button {

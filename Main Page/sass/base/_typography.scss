@@ -79,10 +79,11 @@ body {
 }
 
 .heading-terciary {
-  font-size: $default-font-size;
+  font-size: $title-services;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 4rem;
+  letter-spacing: .2rem;
 }
 
 .paragraph {
