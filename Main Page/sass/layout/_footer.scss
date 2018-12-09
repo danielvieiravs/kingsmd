@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-grey-dark-3;
-  padding: 0 0 8rem;
+  padding: 8rem 0;
   font-size: 1.4rem;
 
   &__container {
@@ -70,7 +70,39 @@
 
   &__col {
     margin-right: 0 !important;
-    padding: 8rem 0 0;
+    padding: 2rem 0 0;
+
+    &__contact {
+      color: $color-white-footer;
+      cursor: pointer;
+      font-size: $default-font-size;
+      text-decoration: none !important;
+      padding: 0 0 0.7rem;
+      display: block;
+      font-weight: 300;
+      width: 30rem;
+      margin: auto;
+
+      &--disabled {
+        pointer-events: none;
+      }
+
+      &--flex {
+        display: flex;
+        width: 30rem;
+        margin: auto;
+      }
+
+      &--auto {
+        width: auto;
+        margin: initial;
+      }
+
+      &:hover {
+        color: $color-white;
+        font-weight: 400;
+      }
+    }
 
     &--logo {
       padding-top: 2rem;
@@ -85,7 +117,6 @@
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
-
     @include respond(tab-port) {
       margin-bottom: 6rem;
     }
@@ -100,7 +131,6 @@
     border-top: 0.1rem solid $color-grey-dark-1;
     padding-top: 2rem;
     display: inline-block;
-
     @include respond(tab-port) {
       width: 100%;
       text-align: center;
@@ -120,7 +150,6 @@
   }
 
   &__link {
-
     &:link,
     &:visited {
       background-color: $color-grey-dark-3;
@@ -144,7 +173,6 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
-
     @include respond(tab-port) {
       width: 100%;
       float: none;
