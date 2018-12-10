@@ -642,6 +642,20 @@ body {
       transition: 0.4s;
       border-radius: 50%; }
 
+.form__textarea {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  border: 0.1rem solid #ddd;
+  width: 100%;
+  display: block;
+  transition: all 0.3s;
+  min-height: 8rem;
+  resize: vertical; }
+
 .form__area, .form__input {
   font-size: 1.5rem;
   font-family: inherit;

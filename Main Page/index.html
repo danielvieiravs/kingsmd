@@ -174,7 +174,7 @@
     <section id="section-stories" class="section__stories">
       <div class="bg-video">
         <div class="bg-video__overlay"></div>
-        <video class="bg-video__content" autoplay muted loop playsinline controls="true">
+        <video class="bg-video__content" autoplay muted loop playsinline>
           <source src="img/video.mp4" type="video/mp4">
           Your browser is not supported!
         </video>
@@ -355,6 +355,17 @@
                   </div>
                 </div>
 
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Notes</label>
+                  </div>
+                  <div data-group="Notes" class="form__row__group__content col-md-12">
+                    <div data-item="Description" class="form__row__item col-md-12">
+                      <textarea class="form__textarea" placeholder="Description"></textarea>
+                    </div>
+                  </div>
+                </div>
+
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
@@ -486,6 +497,17 @@
                   </div>
                 </div>
 
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Notes</label>
+                  </div>
+                  <div data-group="Notes" class="form__row__group__content col-md-12">
+                    <div data-item="Description" class="form__row__item col-md-12">
+                      <textarea class="form__textarea" placeholder="Description"></textarea>
+                    </div>
+                  </div>
+                </div>
+
               </div>
               <div class="form__row">
                 <div class="form__row__item col-md-12 text-center">
@@ -570,6 +592,17 @@
                       <div class="input-append date form-datetime-id">
                         <input readonly="true" type="text" placeholder="Set down Date After or Before" data-format="dd/MM/yyyy hh:mm" class="add-on form__input"></input>
                       </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__row__group col-md-12">
+                  <div class="form__row__item form__row__group__title">
+                    <label class="form__label">Notes</label>
+                  </div>
+                  <div data-group="Notes" class="form__row__group__content col-md-12">
+                    <div data-item="Description" class="form__row__item col-md-12">
+                      <textarea class="form__textarea" placeholder="Description"></textarea>
                     </div>
                   </div>
                 </div>
@@ -1132,6 +1165,7 @@
         },
         success: function(res) {
           resetForms();
+          alert('We have received your email and will get back to you shortly to confirm your booking. Thanks for your patience.');
         }
       });
     }
