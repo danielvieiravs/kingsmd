@@ -26,6 +26,9 @@
     &__gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      @include respond(tab-port) {
+        grid-template-columns: repeat(1, 1fr);
+      }
 
       &__more {
         cursor: pointer;
