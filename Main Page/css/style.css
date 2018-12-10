@@ -759,7 +759,7 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
-    height: calc(100vh - 4rem);
+    max-height: calc(100vh - 4rem);
     overflow: auto;
     display: block; }
   .popup__left {
