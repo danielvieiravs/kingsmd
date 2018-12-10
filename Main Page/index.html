@@ -839,11 +839,13 @@
   }
 
   function effectImage() {
-    $('#ripple-effect-id').ripples({
-      resolution: 512,
-      dropRadius: 20,
-      perturbance: 0.01
-    });
+    if ($('#ripple-effect-id').ripples) {
+      $('#ripple-effect-id').ripples({
+        resolution: 512,
+        dropRadius: 20,
+        perturbance: 0.01
+      });
+    }
   }
 
   function initGallery() {
