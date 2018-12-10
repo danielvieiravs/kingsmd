@@ -299,7 +299,7 @@ body {
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
-  padding: 7rem;
+  padding: 4rem 7rem;
   text-align: center;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -861,15 +861,14 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%); } }
   .header__text-box {
     position: absolute;
-    top: 45%;
-    left: 48%;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    width: 100%;
     text-align: center;
     font-family: UniversityRomanRegular;
     color: #ddd;
     font-size: 3rem;
     font-weight: 700;
-    letter-spacing: .4rem; }
+    letter-spacing: 0.4rem; }
   .header__bold {
     font-weight: bold; }
   .header__button {
@@ -877,10 +876,10 @@ body {
     color: #fff !important;
     font-size: 2.2rem;
     text-transform: uppercase;
-    top: 80%;
-    left: 45%;
+    bottom: 10%;
     position: absolute;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
     .header__button:hover {
       font-weight: bold; }
     .header__button__icon {
@@ -1243,8 +1242,14 @@ body {
   display: flex;
   align-items: center;
   min-height: 100vh; }
+  @media only screen and (max-width: 56.25em) {
+    .section__about {
+      padding: 0 2rem; } }
   .section__about__text {
     padding: 5rem 6rem 5rem 0; }
+    @media only screen and (max-width: 56.25em) {
+      .section__about__text {
+        padding: 5rem 0; } }
 
 .section__book {
   padding: 0;
@@ -1253,6 +1258,9 @@ body {
   min-height: 100vh; }
   .section__book__wrapper__content {
     padding: 6rem; }
+    @media only screen and (max-width: 56.25em) {
+      .section__book__wrapper__content {
+        padding: 6rem 2rem; } }
   .section__book--hidden {
     display: none; }
   .section__book__form__tabs {
