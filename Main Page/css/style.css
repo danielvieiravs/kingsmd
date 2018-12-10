@@ -1269,7 +1269,9 @@ body {
     display: none; }
   .section__book__form__tabs {
     display: flex;
-    padding: 0 0 3rem; }
+    padding: 0 0 3rem;
+    float: initial !important;
+    margin: 0 !important; }
     .section__book__form__tabs--disabled {
       pointer-events: none;
       opacity: 0.5; }

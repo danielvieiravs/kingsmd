@@ -95,6 +95,8 @@
       &__tabs {
         display: flex;
         padding: 0 0 3rem;
+        float: initial !important;
+        margin: 0 !important;
 
         &--disabled {
           pointer-events: none;
