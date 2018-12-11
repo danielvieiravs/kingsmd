@@ -1,4 +1,5 @@
 .section {
+
   &__about,
   &__book,
   &__feature,
@@ -26,6 +27,7 @@
     &__gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+
       @include respond(tab-port) {
         grid-template-columns: repeat(1, 1fr);
       }
@@ -60,12 +62,15 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
+
     @include respond(tab-port) {
       padding: 0 2rem;
     }
 
     &__text {
       padding: 5rem 6rem 5rem 0;
+      text-align: justify;
+
       @include respond(tab-port) {
         padding: 5rem 0;
       }
@@ -81,6 +86,7 @@
     &__wrapper {
       &__content {
         padding: 6rem;
+
         @include respond(tab-port) {
           padding: 6rem 2rem;
         }
@@ -217,6 +223,7 @@
 
         &--2 {
           font-size: 2rem;
+          padding-bottom: 1.5rem;
         }
       }
     }

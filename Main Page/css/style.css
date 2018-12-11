@@ -1264,7 +1264,8 @@ body {
     .section__about {
       padding: 0 2rem; } }
   .section__about__text {
-    padding: 5rem 6rem 5rem 0; }
+    padding: 5rem 6rem 5rem 0;
+    text-align: justify; }
     @media only screen and (max-width: 56.25em) {
       .section__about__text {
         padding: 5rem 0; } }
@@ -1365,4 +1366,5 @@ body {
         padding-bottom: 2rem;
         font-size: 3rem; }
       .section__geral__container__text--2 {
-        font-size: 2rem; }
+        font-size: 2rem;
+        padding-bottom: 1.5rem; }
