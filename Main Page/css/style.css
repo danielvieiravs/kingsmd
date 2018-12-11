@@ -655,6 +655,9 @@ body {
   transition: all 0.3s;
   min-height: 8rem;
   resize: vertical; }
+  .form__textarea:focus {
+    outline: none !important;
+    border-bottom: 0.3rem solid #3f3f3f; }
 
 .form__area, .form__input {
   font-size: 1.5rem;
