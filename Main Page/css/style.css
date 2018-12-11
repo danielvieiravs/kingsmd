@@ -967,7 +967,8 @@ body {
       display: block;
       font-weight: 300;
       width: 30rem;
-      margin: auto; }
+      margin: auto;
+      white-space: nowrap; }
       .footer__col__contact--disabled {
         pointer-events: none; }
       .footer__col__contact--flex {

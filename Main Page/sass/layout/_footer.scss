@@ -83,6 +83,7 @@
       font-weight: 300;
       width: 30rem;
       margin: auto;
+      white-space: nowrap;
 
       &--disabled {
         pointer-events: none;
