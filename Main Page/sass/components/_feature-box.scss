@@ -1,7 +1,7 @@
 .feature-box {
   background-color: rgba($color-white, .8);
   font-size: 1.5rem;
-  padding: 4rem;
+  padding: 2rem;
   text-align: center;
   border-radius: $border-radius-small;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -14,10 +14,18 @@
     padding: 2rem;
   }
 
+  &__title {
+    margin-bottom: 2rem !important;
+  }
+
   &__text {
     height: 12rem;
-    text-align: left;
+    text-align: center;
     margin-bottom: 0;
+
+    &__paragraph {
+      margin: 0;
+    }
   }
 
   &__icon {
@@ -39,6 +47,10 @@
   &__button {
     text-decoration: none !important;
     color: $color-secondary-dark;
+
+    &__text {
+      margin: 0;
+    }
 
     &:hover {
       color: $color-tertiary-light;
