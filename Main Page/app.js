@@ -13,7 +13,7 @@ function navigation() {
     // Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
-    .click(function (event) {
+    .click(function(event) {
       if ($('.navigation__checkbox').prop('checked')) {
         $('.navigation__checkbox').prop('checked', false)
       } else {
@@ -82,7 +82,7 @@ function navigation() {
           event.preventDefault();
           $('html, body').animate({
             scrollTop: target.offset().top
-          }, 1000, function () {
+          }, 1000, function() {
             // Callback after animation
             // Must change focus!
             var $target = $(target);
@@ -101,7 +101,7 @@ function navigation() {
 
 function drawTestimonials() {
   var testList = [{
-    text: '"Thank you so much for all your hard work over the four days of Festive of Speed. Your unwavering passions and enthusiasm was fabulous. Events can only ever be as good as the team that support them, so I am incredibly grateful to be able to work with such an excellent team."',
+    text: '"Thank you so much for all your hard work over the four days of Festival of Speed. Your unwavering passions and enthusiasm was fabulous. Events can only ever be as good as the team that support them, so I am incredibly grateful to be able to work with such an excellent team."',
     user: 'Emma - Aston Martin (UK)'
   }, {
     text: '"I am extremely pleased with the service I receive from JK Movements & Detailing. They are punctual, courteous and very competitively priced. My car is valeted at a convenient time while I am at work and is always done to a very high standard. I have recommended you to all my family & friends. Thanks again."',
@@ -137,10 +137,10 @@ function drawTestimonials() {
 }
 
 function initScroll() {
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     refreshScroll();
   });
-  $('#navigation-back-top').off().on('click', function () {
+  $('#navigation-back-top').off().on('click', function() {
     $('html, body').animate({
       scrollTop: 0
     }, 600);
@@ -160,14 +160,14 @@ function refreshScroll() {
     $('#navigation-back-top').hide();
   }
   clearTimeout(self.timeoutCheck);
-  self.timeoutCheck = setTimeout(function () {
+  self.timeoutCheck = setTimeout(function() {
     autoActive();
   }, 50);
 
   function autoActive() {
-    $('.navigation-tabs-id').each(function () {
+    $('.navigation-tabs-id').each(function() {
       var sc = $(this);
-      sc.find('a').each(function () {
+      sc.find('a').each(function() {
         var currLink = $(this);
         var refElement = $(currLink.attr('href'));
         var elT = Math.floor(refElement.position().top);
@@ -195,7 +195,7 @@ function effectImage() {
 
 function initGallery() {
   var gallery = $('#gallery-photos a').simpleLightbox();
-  $('#gallery-photos-more').off().on('click', function () {
+  $('#gallery-photos-more').off().on('click', function() {
     var valScroll = $(window).scrollTop();
     var icon = $(this).find('i');
     if (icon.hasClass('fa-chevron-down')) {
@@ -217,13 +217,13 @@ function initGallery() {
 
 function contactForm() {
   var cars = [];
-  $('.form-datetime-id').each(function () {
+  $('.form-datetime-id').each(function() {
     if ($(this).data('mode') == 'date') {
       $(this).datetimepicker({
           pickTime: false,
           format: 'dd/MM/yyyy'
         })
-        .on('changeDate', function () {
+        .on('changeDate', function() {
           $(this).datetimepicker('hide');
         });
     } else {
@@ -233,12 +233,12 @@ function contactForm() {
     }
   });
   resetForms();
-  $('.form-contact-iteration').each(function () {
-    $(this).find('select').on('change', function () {
+  $('.form-contact-iteration').each(function() {
+    $(this).find('select').on('change', function() {
       var acOpt = $(this).find('option:selected').data('active');
       if (acOpt) {
         var valOpt = $(this).find('option:selected').val();
-        $('.form__row__item').each(function () {
+        $('.form__row__item').each(function() {
           if ($(this).data('changed') == acOpt && $(this).data('active') == valOpt) {
             $(this).removeClass('form__row__item--disabled');
             $(this).find('input').attr('required', true);
@@ -250,13 +250,13 @@ function contactForm() {
         });
       }
     });
-    $(this).find('.form__radio__input').on('change', function () {
+    $(this).find('.form__radio__input').on('change', function() {
       var valDisabled = $(this).data('disabled');
       var valActive = $(this).data('active');
 
       if (valDisabled || valActive) {
         var valData = valDisabled ? valDisabled : valActive;
-        $('.form__row__item[data-disabled="' + valData + '"]').each(function () {
+        $('.form__row__item[data-disabled="' + valData + '"]').each(function() {
           if (valActive) {
             $(this).removeClass('form__row__item--disabled');
             $(this).find('input').attr('required', true);
@@ -276,29 +276,29 @@ function contactForm() {
   showTab(1);
   formDetailing();
 
-  $('#form-contact-tab-1').off().on('click', function () {
+  $('#form-contact-tab-1').off().on('click', function() {
     showTab(1);
   });
 
-  $('#form-contact-tab-2').off().on('click', function () {
+  $('#form-contact-tab-2').off().on('click', function() {
     showTab(2);
   });
 
-  $('#form-contact-tab-3').off().on('click', function () {
+  $('#form-contact-tab-3').off().on('click', function() {
     showTab(3);
   });
 
-  $('#form-contact-1').on('submit', function (e) {
+  $('#form-contact-1').on('submit', function(e) {
     sendEmail('Movements', $('#form-contact-1'));
     e.preventDefault();
   });
 
-  $('#form-contact-2').on('submit', function (e) {
+  $('#form-contact-2').on('submit', function(e) {
     sendEmail('Detailing', $('#form-contact-2'));
     e.preventDefault();
   });
 
-  $('#form-contact-3').on('submit', function (e) {
+  $('#form-contact-3').on('submit', function(e) {
     sendEmail('Events', $('#form-contact-3'));
     e.preventDefault();
   });
@@ -315,7 +315,7 @@ function contactForm() {
     $('#form-contact-1').trigger('reset');
     $('#form-contact-2').trigger('reset');
     $('#form-contact-3').trigger('reset');
-    $('.form__row__item').each(function () {
+    $('.form__row__item').each(function() {
       if ($(this).data('changed')) {
         $(this).addClass('form__row__item--disabled');
       }
@@ -325,7 +325,7 @@ function contactForm() {
   function formDetailing() {
     var countId = 0;
     newTab();
-    $('#form-detailing-tabs-plus').off().on('click', function () {
+    $('#form-detailing-tabs-plus').off().on('click', function() {
       newTab();
     });
 
@@ -339,7 +339,7 @@ function contactForm() {
         '</span><i class="delete fa fa-trash-o"></i></div>');
       $tab.off().on('click', {
         car: newObj
-      }, function (e) {
+      }, function(e) {
         onClickTab($(e.target).hasClass('delete'), e.data.car);
       });
       $('#form-detailing-tabs').append($tab);
@@ -396,10 +396,10 @@ function contactForm() {
         }
       }
     }
-    $('#form-contact-2').find('.form__row__group__content').each(function () {
+    $('#form-contact-2').find('.form__row__group__content').each(function() {
       var group = $(this).data('group');
       if (group !== 'Details') {
-        $(this).find('.form__row__item').each(function () {
+        $(this).find('.form__row__item').each(function() {
           var group = $(this).parent().data('group');
           var item = $(this).data('item');
           if (set) {
@@ -421,7 +421,7 @@ function contactForm() {
     var obj = {};
     var email = '';
     changeDataTab();
-    parent.find('.form__row__group__content').each(function () {
+    parent.find('.form__row__group__content').each(function() {
       var group = $(this).data('group');
       if (parent.attr('id') == 'form-contact-2') {
         if (group == 'Details') {
@@ -452,7 +452,7 @@ function contactForm() {
 
       function encodeGeral(sc) {
         obj[group] = obj[group] ? obj[group] : [];
-        sc.find('.form__row__item').each(function () {
+        sc.find('.form__row__item').each(function() {
           var item = $(this).data('item');
           var value = '';
           if ($(this).find('input').length) {
@@ -485,7 +485,7 @@ function contactForm() {
         email: email,
         data: obj
       },
-      success: function (res) {
+      success: function(res) {
         resetForms();
         alert(
           'We have received your booking request and will get back to you within 24 hours.  Thanks for your patience.'
